@@ -31,12 +31,17 @@ Meeting Agenda templates (located in the `/docs` directory in this repo):
 
 Everyone on your team should add their name along with a link to their GitHub
 & optionally their LinkedIn profiles below. Do this in Sprint #1 to validate
-your repo access and to practice PR'ing with your team *before* you start
+your repo access and to practice PR'ing with your team _before_ you start
 coding!
 
-- Teammate name #1 (cash_53): [GitHub](https://github.com/Mandla-tech) / [LinkedIn](https://linkedin.com/in/liaccountname)
+cash-53-v50-tier1-team-01
 
 - Teammate name #2: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
 
    ...
 - Teammate name #n: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
+
+- Anita Boakye-Yiadom (Scrum Master): [GitHub](https://github.com/AnitaBoakye) / [LinkedIn](https://linkedin.com/in/anitaboakyeyiadom/)
+- Lawrence Narh-Lawson (Front End Developer): [GitHub](https://github.com/lawlawson) / [LinkedIn](https://www.linkedin.com/in/lawlawson/)
+- Mandla, cash_53 (Developer): [GitHub](https://github.com/Mandla-tech) / [LinkedIn](https://www.linkedin.com/in/ mandla-m/)
+ main
