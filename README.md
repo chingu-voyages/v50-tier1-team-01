@@ -34,5 +34,14 @@ Everyone on your team should add their name along with a link to their GitHub
 your repo access and to practice PR'ing with your team _before_ you start
 coding!
 
+cash-53-v50-tier1-team-01
+
+- Teammate name #2: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
+
+   ...
+- Teammate name #n: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
+
 - Anita Boakye-Yiadom (Scrum Master): [GitHub](https://github.com/AnitaBoakye) / [LinkedIn](https://linkedin.com/in/anitaboakyeyiadom/)
 - Lawrence Narh-Lawson (Front End Developer): [GitHub](https://github.com/lawlawson) / [LinkedIn](https://www.linkedin.com/in/lawlawson/)
+- Mandla, cash_53 (Developer): [GitHub](https://github.com/Mandla-tech) / [LinkedIn](https://www.linkedin.com/in/ mandla-m/)
+ main
