@@ -40,3 +40,5 @@ coding!
 - Mandla, cash_53 (Developer): [GitHub](https://github.com/Mandla-tech) / [LinkedIn](https://www.linkedin.com/in/mandla-m/)
 - Blanka (UX/UI Designer): [GitHub](https://github.com/shineaubergine) / [LinkedIn](https://www.linkedin.com/in/blanka-calija/)
 - Isaac Abodunrin (Developer): [GitHub](https://github.com/bytesandroses)
+- Testing
+
