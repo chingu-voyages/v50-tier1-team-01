@@ -34,11 +34,10 @@ Everyone on your team should add their name along with a link to their GitHub
 your repo access and to practice PR'ing with your team _before_ you start
 coding!
 
-- Adeola Adebayo (Product Owner) https://github.com/adeolaadebayo 
+- Adeola Adebayo (Product Owner) https://github.com/adeolaadebayo
 - Anita Boakye-Yiadom (Scrum Master): [GitHub](https://github.com/AnitaBoakye) / [LinkedIn](https://linkedin.com/in/anitaboakyeyiadom/)
 - Lawrence Narh-Lawson (Front End Developer): [GitHub](https://github.com/lawlawson) / [LinkedIn](https://www.linkedin.com/in/lawlawson/)
 - Mandla, cash_53 (Developer): [GitHub](https://github.com/Mandla-tech) / [LinkedIn](https://www.linkedin.com/in/mandla-m/)
 - Blanka (UX/UI Designer): [GitHub](https://github.com/shineaubergine) / [LinkedIn](https://www.linkedin.com/in/blanka-calija/)
 - Isaac Abodunrin (Developer): [GitHub](https://github.com/bytesandroses)
-- Testing
-
+- Testing branch protection rules
