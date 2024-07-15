@@ -1,4 +1,4 @@
-const menu-div = document.querySelector("#menu-div")
+const menu_div = document.querySelector("#menu-div")
 
 async function getMenuData() {
     const url = "https://menus-api.vercel.app";
@@ -17,3 +17,5 @@ async function getMenuData() {
   }
   
 const menuData = getMenuData();
+
+console.log
