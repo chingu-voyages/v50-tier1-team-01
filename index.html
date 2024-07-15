@@ -1,18 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./scripts/reset.css">
-        <link rel="stylesheet" href="./styles/styles.css">
-        <script src="./scripts/script.js" defer></script>
-        <title>RCP App Name</title>
-    </head>
-    <body>
-        <header></header>
-
-        <main></main>
-
-        <footer></footer>        
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scripts/reset.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <script src="./scripts/script.js" defer></script>
+    <title>RCP App Name</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div>
+        <button id="openModalBtn">Login</button>
+      </div>
+      <div id="loginModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Login</h2>
+          <form id="loginForm">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required />
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required />
+            <button type="submit">Login</button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
 </html>
