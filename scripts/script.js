@@ -26,13 +26,18 @@ document.addEventListener('DOMContentLoaded', () => {
   //form submit
   form.onsubmit = function (event) {
     event.preventDefault();
-    let username = document.getElementById('username').value;
-    let password = document.getElementById('password').value;
-    modal.style.display = 'none';
-    console.log('username:', username);
-    console.log('password:', password);
+    if (validateUsernameInput() && validatePasswordInput()) {
+      let username = document.getElementById('username').value;
+      let password = document.getElementById('password').value;
+      console.log('username:', username);
+      console.log('password:', password);
+      modal.style.display = 'none';
+    } else {
+      console.log('Validation failed!');
+    }
 
-    validateInputs();
+    validateUsernameInput();
+    validatePasswordInput();
   };
 
   const setError = (element, message) => {
@@ -53,28 +58,36 @@ document.addEventListener('DOMContentLoaded', () => {
     inputControl.classList.remove('error');
   };
 
-  // const isValidEmail = (email) => {
-  //   const re =
-  //     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  //   return re.test(String(email).toLowerCase());
-  // };
-
-  const validateInputs = () => {
+  const validateUsernameInput = () => {
     const usernameValue = username.value.trim();
-    const passwordValue = password.value.trim();
 
     if (usernameValue === '') {
       setError(username, 'Username is required');
+      return false;
+    } else if (usernameValue.length < 3) {
+      setError(username, 'Username must be at least 3 characters long');
+      return false;
     } else {
-      setSuccess(username);
+      setSuccess(username, '');
+      return true;
     }
+  };
+
+  const validatePasswordInput = () => {
+    const passwordValue = password.value.trim();
 
     if (passwordValue === '') {
       setError(password, 'Password is required');
+      return false;
     } else if (passwordValue.length < 6) {
       setError(password, 'Password must be at least 6 characters!');
+      return false;
     } else {
-      setSuccess(password);
+      setSuccess(password, '');
+      return true;
     }
   };
+
+  username.onblur = validateUsernameInput;
+  password.onblur = validatePasswordInput;
 });
