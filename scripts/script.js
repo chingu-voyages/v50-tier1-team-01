@@ -60,12 +60,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const validateUsernameInput = () => {
     const usernameValue = username.value.trim();
-
+    const validUsername = 'admin';
     if (usernameValue === '') {
       setError(username, 'Username is required');
       return false;
-    } else if (usernameValue.length < 3) {
-      setError(username, 'Username must be at least 3 characters long');
+    } else if (usernameValue !== validUsername) {
+      setError(username, 'Please enter valid username');
       return false;
     } else {
       setSuccess(username, '');
@@ -75,12 +75,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const validatePasswordInput = () => {
     const passwordValue = password.value.trim();
-
+    const validPassword = 'password1';
     if (passwordValue === '') {
       setError(password, 'Password is required');
       return false;
-    } else if (passwordValue.length < 6) {
-      setError(password, 'Password must be at least 6 characters!');
+    } else if (passwordValue !== validPassword) {
+      setError(password, 'Please enter valid password');
       return false;
     } else {
       setSuccess(password, '');
