@@ -18,11 +18,18 @@
       <div id="loginModal" class="modal">
         <div class="modal-content">
           <span class="close">&times;</span>
-          <form id="loginForm">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" required />
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required />
+          <form id="loginForm" action="/">
+            <div class="input-control">
+              <label for="username">Username</label>
+              <input type="text" id="username" name="username" />
+              <div class="error"></div>
+            </div>
+            <div class="input-control">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" />
+              <div class="error"></div>
+            </div>
+
             <button type="submit">Login</button>
           </form>
         </div>
