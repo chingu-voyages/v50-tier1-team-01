@@ -2,3 +2,54 @@
     margin: 0;
     padding: 0;
   }
+
+  /*Registration form styling begins here*/
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+label {
+  margin-bottom: 5px; /* Add spacing between labels */
+  width: 250px; /*Positions the labels to the left of the block*/
+  display: inline-block;
+
+}
+
+input[type=text],input[type=email], input[type=password] { /*styling for input areas*/
+  width: 20%;
+  padding: 10px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {/*change background when field is active*/
+  background-color: #ddd;
+  outline: none;
+}
+
+#registration-title{
+    text-align: center;
+    color: lightslategrey;
+    margin-right: 80px;
+    margin-bottom: 30px;
+}
+
+.cancelbtn, .registerbtn{
+    background-color:lightcyan;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 8px 8px;
+}
+
+.cancelbtn:hover, .registerbtn:hover {
+  background-color:cyan;
+}
+
+
+/*Registration form styling ends here*/
