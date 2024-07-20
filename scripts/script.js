@@ -2,6 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   const modal = document.getElementById('loginModal');
+  const smodal = document.getElementById('signupModal');
   const btn = document.getElementById('openModalBtn');
   const span = document.getElementsByClassName('close')[0];
   const form = document.getElementById('loginForm');
@@ -11,15 +12,18 @@ document.addEventListener('DOMContentLoaded', () => {
   //modal display
   btn.onclick = function () {
     modal.style.display = 'block';
+    smodal.style.display = 'block';
   };
 
   span.onclick = function () {
     modal.style.display = 'none';
+    smodal.style.display = 'none';
   };
 
   window.onclick = function (event) {
-    if (event.target == modal) {
+    if (event.target == modal && smodal) {
       modal.style.display = 'none';
+      smodal.style.display = 'none';
     }
   };
 
