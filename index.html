@@ -12,55 +12,87 @@
     <header></header>
     <main>
       <div class="button-container">
-        <button class="signup-btn">Sign Up</button>
-        <button id="openModalBtn" class="login-btn">Login</button>
+        <button id="openSignupModalBtn" class="signup-btn">Sign Up</button>
+        <button id="openLoginModalBtn" class="login-btn">Login</button>
       </div>
+
+      <!-- Login Modal -->
       <div id="loginModal" class="modal">
         <div class="modal-content">
           <span class="close">&times;</span>
           <form id="loginForm" action="/">
             <div class="input-control">
-              <label for="username">Username</label>
-              <input type="text" id="username" name="username" />
+              <label for="login-username">Username</label>
+              <input type="text" id="login-username" name="username" />
               <div class="error"></div>
             </div>
             <div class="input-control">
-              <label for="password">Password</label>
-              <input type="password" id="password" name="password" />
+              <label for="login-password">Password</label>
+              <input type="password" id="login-password" name="password" />
               <div class="error"></div>
             </div>
+          </form>
+        </div>
+      </div>
 
-            <!--User Registration Section starts here-->
-            <section id="registration">
-                <h2 id="registration-title">User Registration</h2>
-                <form id="registration-form">
-                    <label for="username">Username: </label>
-                    <input type="text" placeholder="Enter Username" id="username" name="username" required>
+      <!-- Signup Modal -->
+      <div id="signupModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <section id="registration">
+            <h2 id="registration-title">User Registration</h2>
+            <form id="registration-form">
+              <label for="signup-username">Username: </label>
+              <input
+                type="text"
+                placeholder="Enter Username"
+                id="signup-username"
+                name="username"
+                required />
 
-                    <label for="email">Email: </label>
-                    <input type="email" placeholder="Enter Email" id="email" name="email" required>
+              <label for="email">Email: </label>
+              <input
+                type="email"
+                placeholder="Enter Email"
+                id="email"
+                name="email"
+                required />
 
-                    <label for="password">Password: </label>
-                    <input type="password" placeholder="Enter Password" id="password" name="password" pattern="^(?=.*\d)(?=.*[a-zA-Z])(?
-                    =.*[^a-zA-Z0-9])\S{8,}$" title="Password must contain at least one number, one alphabet,
-                     one symbol, and be at least 8 characters long" required>
+              <label for="signup-password">Password: </label>
+              <input
+                type="password"
+                placeholder="Enter Password"
+                id="signup-password"
+                name="password"
+                pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9])\S{8,}$"
+                title="Password must contain at least one number, one alphabet, one symbol, and be at least 8 characters long"
+                required />
 
-                    <label for="repassword">Re-type Password: </label>
-                    <input type="password" placeholder="Repeat Password" id="repassword" name="repassword" required>
+              <label for="repassword">Re-type Password: </label>
+              <input
+                type="password"
+                placeholder="Repeat Password"
+                id="repassword"
+                name="repassword"
+                required />
 
-                    <label for="mobile">Contact:</label>
-                    <input type="text" placeholder="Mobile Number" id="mobile" name="mobile" maxlength="10" required>
+              <label for="mobile">Contact:</label>
+              <input
+                type="text"
+                placeholder="Mobile Number"
+                id="mobile"
+                name="mobile"
+                maxlength="10"
+                required />
 
-                    <div class="finalize">
-                    <button type="button" class="cancelbtn">Cancel</button>
-                    <button type="submit" class="registerbtn">Register</button>
-                    </div>
-                </form>
-            </section>
-              <!--User Registration Section ends here-->
-
-        </main>
-
-    </body>
-
+              <div class="finalize">
+                <button type="button" class="cancelbtn">Cancel</button>
+                <button type="submit" class="registerbtn">Register</button>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
