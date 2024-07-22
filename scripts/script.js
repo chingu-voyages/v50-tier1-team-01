@@ -1,41 +1,50 @@
-// login modal
-
 document.addEventListener('DOMContentLoaded', () => {
-  const modal = document.getElementById('loginModal');
-  const smodal = document.getElementById('signupModal');
-  const btn = document.getElementById('openModalBtn');
-  const span = document.getElementsByClassName('close')[0];
-  const form = document.getElementById('loginForm');
-  let username = document.getElementById('username');
-  let password = document.getElementById('password');
+  const loginModal = document.getElementById('loginModal');
+  const signupModal = document.getElementById('signupModal');
+  const openLoginModalBtn = document.getElementById('openLoginModalBtn');
+  const openSignupModalBtn = document.getElementById('openSignupModalBtn');
+  const closeElements = document.querySelectorAll('.close');
+  const loginForm = document.getElementById('loginForm');
+  let username = document.getElementById('login-username');
+  let password = document.getElementById('login-password');
 
-  //modal display
-  btn.onclick = function () {
-    modal.style.display = 'block';
-    smodal.style.display = 'block';
+  // When the user clicks the login button, open the login modal
+  openLoginModalBtn.onclick = function () {
+    loginModal.style.display = 'block';
   };
 
-  span.onclick = function () {
-    modal.style.display = 'none';
-    smodal.style.display = 'none';
+  // When the user clicks the sign up button, open the sign up modal
+  openSignupModalBtn.onclick = function () {
+    signupModal.style.display = 'block';
   };
 
+  // When the user clicks on <span> (x), close the modal
+  closeElements.forEach((closeElement) => {
+    closeElement.onclick = function () {
+      loginModal.style.display = 'none';
+      signupModal.style.display = 'none';
+    };
+  });
+
+  // When the user clicks anywhere outside of the modal, close it
   window.onclick = function (event) {
-    if (event.target == modal && smodal) {
-      modal.style.display = 'none';
-      smodal.style.display = 'none';
+    if (event.target === loginModal) {
+      loginModal.style.display = 'none';
+    }
+    if (event.target === signupModal) {
+      signupModal.style.display = 'none';
     }
   };
 
-  //form submit
-  form.onsubmit = function (event) {
+  // Form submit
+  loginForm.onsubmit = function (event) {
     event.preventDefault();
     if (validateUsernameInput() && validatePasswordInput()) {
-      let username = document.getElementById('username').value;
-      let password = document.getElementById('password').value;
-      console.log('username:', username);
-      console.log('password:', password);
-      modal.style.display = 'none';
+      let usernameValue = document.getElementById('login-username').value;
+      let passwordValue = document.getElementById('login-password').value;
+      console.log('username:', usernameValue);
+      console.log('password:', passwordValue);
+      loginModal.style.display = 'none';
     } else {
       console.log('Validation failed!');
     }
