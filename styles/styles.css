@@ -11,6 +11,10 @@
   border-radius: 20px;
 }
 
+.primary-menu-item-details-div {
+  padding: 20px;
+}
+
 .menu-list-item {
   border: 5px solid aqua;
   width: 700px;
