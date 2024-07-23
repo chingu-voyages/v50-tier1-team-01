@@ -20,16 +20,20 @@ async function getMenuData() {
         menu_list.innerHTML += `
           <li class="menu-list-item">
             <div class="menu-item">
-              <img class="menu-item-image" src=${pizzas_selected[i].img}>
-
-              <div class="menu-item-details">
-                <div class="menu-item-name"> ${pizzas_selected[i].dsc} </div>
-                <div class="menu-item-price"> $${pizzas_selected[i].price} </div>
+              <div class="menu-image-div">
+                <img class="menu-item-image" src=${pizzas_selected[i].img}>
               </div>
 
-              <div class="menu-item-details">
-                <div class="menu-item-rating"> ${pizzas_selected[i].rate} </div>
-                <button class="add-to-basket-button"></button>
+              <div class="primary-menu-item-details-div">
+                <div class="menu-item-details">
+                  <div class="menu-item-name"> ${pizzas_selected[i].dsc} </div>
+                  <div class="menu-item-price"> $${pizzas_selected[i].price} </div>
+                </div>
+
+                <div class="menu-item-details">
+                  <div class="menu-item-rating"> ${pizzas_selected[i].rate} </div>
+                  <button class="add-to-basket-button">Add</button>
+                </div>
               </div>
 
             </div>
