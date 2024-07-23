@@ -3,13 +3,13 @@
   flex-wrap: wrap;
 }
 
-img {
+.menu-item-image {
   max-width: 200px;
   height: auto;
   border-radius: 20px;
 }
 
-li {
+.menu-list-item {
   border: 5px solid aqua;
   width: 350px;
   height: 350px;

@@ -18,7 +18,7 @@ async function getMenuData() {
       // Create tile for each pizza
       for (let i = 0; i < 20; i++) {
         menu_list.innerHTML += `
-          <li>
+          <li class="menu-list-item">
             <div class="menu-item">
               <img class="menu-item-image" src=${pizzas_selected[i].img}>
 
