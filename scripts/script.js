@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const openLoginModalBtn = document.getElementById('openLoginModalBtn');
   const openSignupModalBtn = document.getElementById('openSignupModalBtn');
   const closeElements = document.querySelectorAll('.close');
+  const cancelBtns = document.querySelectorAll('.cancelbtn');
   const loginForm = document.getElementById('loginForm');
   let username = document.getElementById('login-username');
   let password = document.getElementById('login-password');
@@ -35,6 +36,15 @@ document.addEventListener('DOMContentLoaded', () => {
       signupModal.style.display = 'none';
     }
   };
+
+    // When the user clicks the cancel button, close the modal
+    cancelBtns.forEach((cancelBtn) => {
+      cancelBtn.onclick = function () {
+        loginModal.style.display = 'none';
+        signupModal.style.display = 'none';
+      };
+    });
+
 
   // Form submit
   loginForm.onsubmit = function (event) {
