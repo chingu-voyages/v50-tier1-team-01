@@ -4,7 +4,13 @@
 }
 
 img {
-  max-width: 300px;
+  max-width: 200px;
   height: auto;
   border-radius: 20px;
+}
+
+li {
+  border: 5px solid aqua;
+  width: 350px;
+  height: 350px;
 }
