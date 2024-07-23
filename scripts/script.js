@@ -22,12 +22,12 @@ async function getMenuData() {
             <div class="menu-item">
               <img class="menu-item-image" src=${pizzas_selected[i].img}>
 
-              <div class="menu-item-details-row-1">
+              <div class="menu-item-details">
                 <div class="menu-item-name"> ${pizzas_selected[i].dsc} </div>
                 <div class="menu-item-price"> $${pizzas_selected[i].price} </div>
               </div>
 
-              <div class="menu-item-details-row-2">
+              <div class="menu-item-details">
                 <div class="menu-item-rating"> ${pizzas_selected[i].rate} </div>
                 <button class="add-to-basket-button"></button>
               </div>
@@ -36,14 +36,9 @@ async function getMenuData() {
           </li>
         `
       }
-      
-
-      console.log(pizzas_selected); 
-
-
     } catch (error) {
       console.error(error.message);
     }
   }
 
-  getMenuData()
+  getMenuData();
