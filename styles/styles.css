@@ -1,56 +1,13 @@
-
-  /*Registration form styling begins here*/
-
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 80vh;
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
-label {
-  margin-bottom: 5px; /* Add spacing between labels */
-  width: 250px; /*Positions the labels to the left of the block*/
-  display: inline-block;
-
+*, *::before, *::after {
+  box-sizing: border-box;
 }
-
-input[type=text],input[type=email], input[type=password] { /*styling for input areas*/
-  width: 20%;
-  padding: 10px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #f1f1f1;
-}
-
-input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {/*change background when field is active*/
-  background-color: #ddd;
-  outline: none;
-}
-
-#registration-title{
-    text-align: center;
-    color: lightslategrey;
-    margin-right: 80px;
-    margin-bottom: 30px;
-}
-
-.cancelbtn, .registerbtn{
-    background-color:lightcyan;
-    border-radius: 6px;
-    cursor: pointer;
-    padding: 8px 8px;
-}
-
-.cancelbtn:hover, .registerbtn:hover {
-  background-color:cyan;
-}
-
-
-/*Registration form styling ends here*/
-
-/* Login modal */
 
 body {
   font-family: Arial, sans-serif;
@@ -59,8 +16,28 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+ol, ul, menu {
+  list-style: none;
+}
+
+/* Button Container */
 .button-container {
   display: flex;
   justify-content: center;
@@ -68,8 +45,25 @@ body {
   height: 100%;
 }
 
+.signup-btn,
+.login-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  background-color: aquamarine;
+  border: none;
+  cursor: pointer;
+}
+
+
 .signup-btn {
   margin-right: 20px;
+
+}
+
+.signup-btn:hover,
+.login-btn:hover {
+  background-color: darkcyan;
 }
 
 #openModalBtn {
@@ -79,6 +73,7 @@ body {
   background-color: aquamarine;
 }
 
+/* Modal */
 .modal {
   display: none;
   position: fixed;
@@ -88,14 +83,13 @@ body {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
   padding-top: 60px;
 }
 
 .modal-content {
   background-color: #fefefe;
-  margin: 5% auto;
+  margin: auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
@@ -116,61 +110,109 @@ body {
   cursor: pointer;
 }
 
-.input-control {
+/* Login Form */
+#loginForm .input-control {
   display: flex;
   flex-direction: column;
+  width: 80%;
+  margin-left: 90px;
+  font-weight: bold;
 }
 
-.input-control input {
+#login-title {
+  text-align: center;
+  color: lightslategrey;
+  margin-right: 120px;
+  margin-bottom: 30px;
+}
+
+#loginForm .input-control input {
   border: 2px solid #f0f0f0;
   border-radius: 4px;
   display: block;
   font-size: 12px;
   padding: 10px;
-  width: 100%;
+  width: 80%;
+  margin-right: 50px;
 }
 
-.input-control input:focus {
+#loginForm .input-control input:focus {
   outline: 0;
+  background-color: #ddd;
 }
 
-.input-control.success input {
+#loginForm .input-control.success input {
   border-color: #09c372;
 }
 
-.input-control.error input {
+#loginForm .input-control.error input {
   border-color: #ff3860;
 }
 
-.input-control .error {
+#loginForm .input-control .error {
   color: #ff3860;
   font-size: 9px;
   height: 13px;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
+#loginForm .login-btn{
+  width: 80px;
+  margin-right: 50px;
 }
 
-label {
-  margin: 10px 0 5px;
+
+
+/* Registration Form */
+#registration-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 85vh;
+}
+
+#registration-form label {
+  margin-bottom: 5px;
+  width: 280px;
+  display: inline-block;
   font-weight: bold;
 }
 
-input {
+#registration-form input[type=text],
+#registration-form input[type=email],
+#registration-form input[type=password] {
+  width: 80%;
   padding: 10px;
-  margin-bottom: 5px;
-  font-size: 16px;
-  border: 1px solid gainsboro;
-  border-radius: 10px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
 }
 
-button {
-  margin-top: 10px;
-  padding: 10px;
-  font-size: 16px;
+#registration-form input[type=text]:focus,
+#registration-form input[type=email]:focus,
+#registration-form input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+#registration-title {
+  text-align: center;
+  color: lightslategrey;
+  margin-right: 80px;
+  margin-bottom: 30px;
+}
+
+.cancelbtn,
+.registerbtn {
+  background-color: lightcyan;
+  border-radius: 6px;
   cursor: pointer;
-  border-radius: 10px;
-  background-color: aquamarine;
+  padding: 8px 8px;
+}
+
+.cancelbtn:hover{
+  background-color: red;
+}
+.registerbtn:hover {
+  background-color: darkcyan;
 }
