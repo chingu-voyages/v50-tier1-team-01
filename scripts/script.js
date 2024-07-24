@@ -53,7 +53,7 @@ function displayRating(rating_score) {
     rating_star.push("★");
   }
 
-  for (let i = 0; i < 5 - rating_star.length + 1; i++) {
+  for (let i = 0; i < 5 - rating_star.length; i++) {
     rating_star.push("☆");
   }
 
