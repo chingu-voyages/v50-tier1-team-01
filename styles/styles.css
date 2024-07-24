@@ -13,6 +13,7 @@
 
 .primary-menu-item-details-div {
   padding: 20px;
+  flex: 2;
 }
 
 .menu-list-item {
