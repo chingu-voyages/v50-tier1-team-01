@@ -5,6 +5,10 @@
   gap: 20px;
 }
 
+.menu-image-div {
+  width: 200px;
+}
+
 .menu-item-image {
   max-width: 200px;
   height: auto;
@@ -30,4 +34,12 @@
 .menu-item-details {
   display: flex;
   justify-content: space-between;
+}
+
+.menu-item-name {
+  font-weight: bold;
+}
+
+.menu-item-price {
+  color: crimson;
 }
