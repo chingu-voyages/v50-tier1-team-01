@@ -16,7 +16,76 @@
                 <ul class="menu-list" id="menu-list"></ul>
             </div>
         </main>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scripts/reset.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <script src="./scripts/script.js" defer></script>
+    <title>RCP App Name</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div class="button-container">
+        <button id="openSignupModalBtn" class="signup-btn">Sign Up</button>
+        <button id="openLoginModalBtn" class="login-btn">Login</button>
+      </div>
 
-        <footer></footer>        
-    </body>
+      <!-- Login Modal -->
+      <div id="loginModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2 id="login-title">Login</h2>
+          <form id="loginForm" action="/">
+            <div class="input-control">
+              <label for="login-username">Username</label>
+              <input type="text" id="login-username" name="username" />
+              <div class="error"></div>
+            </div>
+            <div class="input-control">
+              <label for="login-password">Password</label>
+              <input type="password" id="login-password" name="password" />
+              <div class="error"></div>
+              <button type="submit" class="login-btn">Login</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Signup Modal -->
+      <div id="signupModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <section id="registration">
+            <h2 id="registration-title">User Registration</h2>
+            <form id="registration-form">
+              <label for="signup-username">Username: </label>
+              <input type="text" placeholder="Enter Username" id="signup-username" name="username" required />
+
+              <label for="email">Email: </label>
+              <input type="email" placeholder="Enter Email" id="email" name="email" required />
+
+              <label for="signup-password">Password: </label>
+              <input type="password" placeholder="Enter Password" id="signup-password" name="password"
+                pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9])\S{8,}$"
+                title="Password must contain at least one number, one alphabet, one symbol, and be at least 8 characters long"
+                required />
+
+              <label for="repassword">Re-type Password: </label>
+              <input type="password" placeholder="Repeat Password" id="repassword" name="repassword" required />
+
+              <label for="mobile">Contact:</label>
+              <input type="text" placeholder="Mobile Number" id="mobile" name="mobile" maxlength="10"required />
+
+              <div class="finalize">
+                <button type="button" class="cancelbtn">Cancel</button>
+                <button type="submit" class="registerbtn">Register</button>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>

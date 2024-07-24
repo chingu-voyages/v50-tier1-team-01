@@ -61,3 +61,221 @@
 .menu-item-rating {
   color: gold;
 }
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+ol, ul, menu {
+  list-style: none;
+}
+
+/* Button Container */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.signup-btn,
+.login-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  background-color: aquamarine;
+  border: none;
+  cursor: pointer;
+}
+
+
+.signup-btn {
+  margin-right: 20px;
+
+}
+
+.signup-btn:hover,
+.login-btn:hover {
+  background-color: darkcyan;
+}
+
+#openModalBtn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  background-color: aquamarine;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+}
+
+.close {
+  color: red;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Login Form */
+#loginForm .input-control {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-left: 90px;
+  font-weight: bold;
+}
+
+#login-title {
+  text-align: center;
+  color: lightslategrey;
+  margin-right: 120px;
+  margin-bottom: 30px;
+}
+
+#loginForm .input-control input {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  font-size: 12px;
+  padding: 10px;
+  width: 80%;
+  margin-right: 50px;
+}
+
+#loginForm .input-control input:focus {
+  outline: 0;
+  background-color: #ddd;
+}
+
+#loginForm .input-control.success input {
+  border-color: #09c372;
+}
+
+#loginForm .input-control.error input {
+  border-color: #ff3860;
+}
+
+#loginForm .input-control .error {
+  color: #ff3860;
+  font-size: 9px;
+  height: 13px;
+}
+
+#loginForm .login-btn{
+  width: 80px;
+  margin-right: 50px;
+}
+
+
+
+/* Registration Form */
+#registration-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 85vh;
+}
+
+#registration-form label {
+  margin-bottom: 5px;
+  width: 280px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+#registration-form input[type=text],
+#registration-form input[type=email],
+#registration-form input[type=password] {
+  width: 80%;
+  padding: 10px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+#registration-form input[type=text]:focus,
+#registration-form input[type=email]:focus,
+#registration-form input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+#registration-title {
+  text-align: center;
+  color: lightslategrey;
+  margin-right: 80px;
+  margin-bottom: 30px;
+}
+
+.cancelbtn,
+.registerbtn {
+  background-color: lightcyan;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 8px 8px;
+}
+
+.cancelbtn:hover{
+  background-color: red;
+}
+.registerbtn:hover {
+  background-color: darkcyan;
+}
