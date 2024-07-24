@@ -1,3 +1,66 @@
+.menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.menu-image-div {
+  width: 200px;
+}
+
+.menu-item-image {
+  max-width: 200px;
+  height: auto;
+  border-radius: 20px;
+}
+
+.primary-menu-item-details-div {
+  padding: 20px;
+  flex: 2;
+}
+
+.menu-list-item {
+  border: 5px solid aqua;
+  width: 700px;
+  height: auto;
+}
+
+.menu-item {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu-item-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-item-name {
+  font-weight: bold;
+}
+
+.menu-item-price {
+  color: crimson;
+}
+
+.add-to-basket-button {
+  color: aliceblue;
+  background-color: #007AFF;
+  border-radius: 20px;
+  width: 75px;
+  height: 35px;
+}
+
+.add-to-basket-button:hover {
+  background-color: #3f93ec;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.menu-item-rating {
+  color: gold;
+}
 /* General Reset */
 * {
   margin: 0;
