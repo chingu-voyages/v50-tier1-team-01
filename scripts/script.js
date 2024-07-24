@@ -1,4 +1,5 @@
 const menu_list = document.querySelector("#menu-list");
+const test = document.querySelector(".test");
 
 async function getMenuData() {
     const url = "https://menus-api.vercel.app";
@@ -31,7 +32,7 @@ async function getMenuData() {
                 </div>
 
                 <div class="menu-item-details">
-                  <div class="menu-item-rating"> ${pizzas_selected[i].rate} </div>
+                  <div class="menu-item-rating"> ${displayRating(pizzas_selected[i].rate)} </div>
                   <button class="add-to-basket-button">Add</button>
                 </div>
               </div>
@@ -45,4 +46,18 @@ async function getMenuData() {
     }
   }
 
-  getMenuData();
+function displayRating(rating_score) {
+  const rating_star = [];
+
+  for (let i = 0; i < rating_score; i++) {
+    rating_star.push("★");
+  }
+
+  for (let i = 0; i < 5 - rating_star.length + 1; i++) {
+    rating_star.push("☆");
+  }
+
+  return rating_star.join("");
+}
+
+getMenuData();
