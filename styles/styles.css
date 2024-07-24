@@ -43,3 +43,11 @@
 .menu-item-price {
   color: crimson;
 }
+
+.add-to-basket-button {
+  color: aliceblue;
+  background-color: #007AFF;
+  border-radius: 20px;
+  width: 75px;
+  height: 35px;
+}
