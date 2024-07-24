@@ -51,3 +51,9 @@
   width: 75px;
   height: 35px;
 }
+
+.add-to-basket-button:hover {
+  background-color: #3f93ec;
+  transition: 0.5s;
+  cursor: pointer;
+}
