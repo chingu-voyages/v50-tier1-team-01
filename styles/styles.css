@@ -57,3 +57,7 @@
   transition: 0.5s;
   cursor: pointer;
 }
+
+.menu-item-rating {
+  color: gold;
+}
