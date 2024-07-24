@@ -1,3 +1,14 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
 .menu-list {
   display: flex;
   flex-wrap: wrap;
@@ -21,9 +32,11 @@
 }
 
 .menu-list-item {
-  border: 5px solid aqua;
+  border: 1px solid #fff;
   width: 700px;
   height: auto;
+  border-radius: 1rem;
+  box-shadow: 0px 4px 21px -12px rgba(0, 0, 0, 0.79);
 }
 
 .menu-item {
@@ -46,7 +59,7 @@
 
 .add-to-basket-button {
   color: aliceblue;
-  background-color: #007AFF;
+  background-color: #007aff;
   border-radius: 20px;
   width: 75px;
   height: 35px;
@@ -61,44 +74,8 @@
 .menu-item-rating {
   color: gold;
 }
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
 
-*, *::before, *::after {
-  box-sizing: border-box;
-}
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
-}
-
-input, button, textarea, select {
-  font: inherit;
-}
-
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
-}
-
-ol, ul, menu {
-  list-style: none;
-}
 
 /* Button Container */
 .button-container {
@@ -118,10 +95,8 @@ ol, ul, menu {
   cursor: pointer;
 }
 
-
 .signup-btn {
   margin-right: 20px;
-
 }
 
 .signup-btn:hover,
@@ -218,12 +193,10 @@ ol, ul, menu {
   height: 13px;
 }
 
-#loginForm .login-btn{
+#loginForm .login-btn {
   width: 80px;
   margin-right: 50px;
 }
-
-
 
 /* Registration Form */
 #registration-form {
@@ -241,9 +214,9 @@ ol, ul, menu {
   font-weight: bold;
 }
 
-#registration-form input[type=text],
-#registration-form input[type=email],
-#registration-form input[type=password] {
+#registration-form input[type='text'],
+#registration-form input[type='email'],
+#registration-form input[type='password'] {
   width: 80%;
   padding: 10px;
   margin: 5px 0 22px 0;
@@ -251,9 +224,9 @@ ol, ul, menu {
   background: #f1f1f1;
 }
 
-#registration-form input[type=text]:focus,
-#registration-form input[type=email]:focus,
-#registration-form input[type=password]:focus {
+#registration-form input[type='text']:focus,
+#registration-form input[type='email']:focus,
+#registration-form input[type='password']:focus {
   background-color: #ddd;
   outline: none;
 }
@@ -273,7 +246,7 @@ ol, ul, menu {
   padding: 8px 8px;
 }
 
-.cancelbtn:hover{
+.cancelbtn:hover {
   background-color: red;
 }
 .registerbtn:hover {
