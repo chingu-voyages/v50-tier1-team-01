@@ -1,7 +1,18 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
 .menu-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   gap: 20px;
 }
 
@@ -21,9 +32,11 @@
 }
 
 .menu-list-item {
-  border: 5px solid aqua;
+  border: 1px solid #fff;
   width: 700px;
   height: auto;
+  border-radius: 1rem;
+  box-shadow: 0px 4px 21px -12px rgba(0, 0, 0, 0.79);
 }
 
 .menu-item {
@@ -46,7 +59,7 @@
 
 .add-to-basket-button {
   color: aliceblue;
-  background-color: #007AFF;
+  background-color: #007aff;
   border-radius: 20px;
   width: 75px;
   height: 35px;
@@ -61,44 +74,6 @@
 .menu-item-rating {
   color: gold;
 }
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
-}
-
-input, button, textarea, select {
-  font: inherit;
-}
-
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
-}
-
-ol, ul, menu {
-  list-style: none;
-}
 
 /* Button Container */
 .button-container {
@@ -106,6 +81,7 @@ ol, ul, menu {
   justify-content: center;
   align-items: center;
   height: 100%;
+  margin: 60px 0;
 }
 
 .signup-btn,
@@ -113,15 +89,13 @@ ol, ul, menu {
   padding: 10px 20px;
   font-size: 16px;
   border-radius: 10px;
-  background-color: aquamarine;
+  background-color: rgb(255, 195, 127);
   border: none;
   cursor: pointer;
 }
 
-
 .signup-btn {
   margin-right: 20px;
-
 }
 
 .signup-btn:hover,
@@ -152,11 +126,11 @@ ol, ul, menu {
 
 .modal-content {
   background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
+  border-radius: 1rem;
+  margin: 0 auto;
+  padding: 20px 10px;
   width: 80%;
-  max-width: 400px;
+  max-width: 600px;
 }
 
 .close {
@@ -164,6 +138,7 @@ ol, ul, menu {
   float: right;
   font-size: 28px;
   font-weight: bold;
+  margin-right: 10px;
 }
 
 .close:hover,
@@ -191,11 +166,10 @@ ol, ul, menu {
 
 #loginForm .input-control input {
   border: 2px solid #f0f0f0;
-  border-radius: 4px;
+  border-radius: 10px;
   display: block;
   font-size: 12px;
   padding: 10px;
-  width: 80%;
   margin-right: 50px;
 }
 
@@ -218,12 +192,10 @@ ol, ul, menu {
   height: 13px;
 }
 
-#loginForm .login-btn{
-  width: 80px;
+#loginForm .login-btn {
+  margin: 25px 0;
   margin-right: 50px;
 }
-
-
 
 /* Registration Form */
 #registration-form {
@@ -231,7 +203,7 @@ ol, ul, menu {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 85vh;
+  height: 60vh;
 }
 
 #registration-form label {
@@ -239,21 +211,21 @@ ol, ul, menu {
   width: 280px;
   display: inline-block;
   font-weight: bold;
+  text-align: start;
 }
 
-#registration-form input[type=text],
-#registration-form input[type=email],
-#registration-form input[type=password] {
-  width: 80%;
+#registration-form input[type='text'],
+#registration-form input[type='email'],
+#registration-form input[type='password'] {
+  width: 90%;
   padding: 10px;
   margin: 5px 0 22px 0;
-  border: none;
   background: #f1f1f1;
 }
 
-#registration-form input[type=text]:focus,
-#registration-form input[type=email]:focus,
-#registration-form input[type=password]:focus {
+#registration-form input[type='text']:focus,
+#registration-form input[type='email']:focus,
+#registration-form input[type='password']:focus {
   background-color: #ddd;
   outline: none;
 }
@@ -267,13 +239,14 @@ ol, ul, menu {
 
 .cancelbtn,
 .registerbtn {
-  background-color: lightcyan;
+  background-color: rgb(255, 195, 127);
   border-radius: 6px;
   cursor: pointer;
   padding: 8px 8px;
+  margin: 10px 0;
 }
 
-.cancelbtn:hover{
+.cancelbtn:hover {
   background-color: red;
 }
 .registerbtn:hover {

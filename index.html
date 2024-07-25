@@ -1,37 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="./scripts/script.js" defer></script>
-        <link rel="stylesheet" href="./styles/reset.css">
-        <link rel="stylesheet" href="./styles/styles.css">
-        <title>RCP App Name</title>
-    </head>
-    <body>
-        <header></header>
-
-        <main>
-            <div class="menu-div" id="menu-div">
-                <ul class="menu-list" id="menu-list"></ul>
-            </div>
-        </main>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./scripts/reset.css" />
-    <link rel="stylesheet" href="./styles/styles.css" />
     <script src="./scripts/script.js" defer></script>
-    <title>RCP App Name</title>
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Pizza App</title>
   </head>
   <body>
-    <header></header>
-    <main>
+    <header>
       <div class="button-container">
         <button id="openSignupModalBtn" class="signup-btn">Sign Up</button>
         <button id="openLoginModalBtn" class="login-btn">Login</button>
       </div>
-
+    </header>
+    <main>
       <!-- Login Modal -->
       <div id="loginModal" class="modal">
         <div class="modal-content">
@@ -52,7 +36,6 @@
           </form>
         </div>
       </div>
-
       <!-- Signup Modal -->
       <div id="signupModal" class="modal">
         <div class="modal-content">
@@ -61,23 +44,47 @@
             <h2 id="registration-title">User Registration</h2>
             <form id="registration-form">
               <label for="signup-username">Username: </label>
-              <input type="text" placeholder="Enter Username" id="signup-username" name="username" required />
+              <input
+                type="text"
+                placeholder="Enter Username"
+                id="signup-username"
+                name="username"
+                required />
 
               <label for="email">Email: </label>
-              <input type="email" placeholder="Enter Email" id="email" name="email" required />
+              <input
+                type="email"
+                placeholder="Enter Email"
+                id="email"
+                name="email"
+                required />
 
               <label for="signup-password">Password: </label>
-              <input type="password" placeholder="Enter Password" id="signup-password" name="password"
+              <input
+                type="password"
+                placeholder="Enter Password"
+                id="signup-password"
+                name="password"
                 pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9])\S{8,}$"
                 title="Password must contain at least one number, one alphabet, one symbol, and be at least 8 characters long"
                 required />
 
               <label for="repassword">Re-type Password: </label>
-              <input type="password" placeholder="Repeat Password" id="repassword" name="repassword" required />
+              <input
+                type="password"
+                placeholder="Repeat Password"
+                id="repassword"
+                name="repassword"
+                required />
 
               <label for="mobile">Contact:</label>
-              <input type="text" placeholder="Mobile Number" id="mobile" name="mobile" maxlength="10"required />
-
+              <input
+                type="text"
+                placeholder="Mobile Number"
+                id="mobile"
+                name="mobile"
+                maxlength="10"
+                required />
               <div class="finalize">
                 <button type="button" class="cancelbtn">Cancel</button>
                 <button type="submit" class="registerbtn">Register</button>
@@ -85,6 +92,9 @@
             </form>
           </section>
         </div>
+      </div>
+      <div class="menu-div" id="menu-div">
+        <ul class="menu-list" id="menu-list"></ul>
       </div>
     </main>
   </body>
