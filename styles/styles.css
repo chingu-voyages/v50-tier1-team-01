@@ -131,6 +131,7 @@ body {
   padding: 20px 10px;
   width: 80%;
   max-width: 600px;
+  transform: translateY(-8vh);
 }
 
 .close {
@@ -203,24 +204,29 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 60vh;
+  height: 80vh;
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+
 }
 
 #registration-form label {
+  width: 100%;
+  display: block;
   margin-bottom: 5px;
-  width: 280px;
-  display: inline-block;
   font-weight: bold;
-  text-align: start;
+  text-align: left;
 }
 
 #registration-form input[type='text'],
 #registration-form input[type='email'],
 #registration-form input[type='password'] {
-  width: 90%;
-  padding: 10px;
+  width: 100%;
+  padding: 5px;
   margin: 5px 0 22px 0;
   background: #f1f1f1;
+  box-sizing: border-box;
 }
 
 #registration-form input[type='text']:focus,
@@ -237,6 +243,12 @@ body {
   margin-bottom: 30px;
 }
 
+.finalize {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
 .cancelbtn,
 .registerbtn {
   background-color: rgb(255, 195, 127);
@@ -244,6 +256,7 @@ body {
   cursor: pointer;
   padding: 8px 8px;
   margin: 10px 0;
+  width: 48%;
 }
 
 .cancelbtn:hover {
