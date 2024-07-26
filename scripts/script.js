@@ -17,7 +17,7 @@ async function getMenuData() {
     const pizzas_selected = pizzas_all.slice(0, 20);
 
     // Create tile for each pizza
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 20; i++) {
       menu_list.innerHTML += `
           <li class="menu-list-item">
             <div class="menu-item">

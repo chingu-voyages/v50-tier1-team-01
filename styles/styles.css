@@ -252,3 +252,20 @@ body {
 .registerbtn:hover {
   background-color: darkcyan;
 }
+
+.footer-container {
+  display: flex;
+  background-color: rgb(255, 195, 127);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-container a img {
+  height: 3rem;
+  width: 3rem;
+  text-align: center;
+}
