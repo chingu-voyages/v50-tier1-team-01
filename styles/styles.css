@@ -139,7 +139,6 @@ body {
   padding: 20px 10px;
   width: 80%;
   max-width: 600px;
-  transform: translateY(-8vh);
 }
 
 .close {
@@ -212,9 +211,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 80vh;
-  width: 90%;
-  max-width: 500px;
+  width: 100%;
+  max-width: 400px;
   margin: 0 auto;
 
 }
@@ -231,8 +229,8 @@ body {
 #registration-form input[type='email'],
 #registration-form input[type='password'] {
   width: 100%;
-  padding: 5px;
-  margin: 5px 0 22px 0;
+  padding: 10px;
+  margin: 5px 0 15px 0;
   background: #f1f1f1;
   box-sizing: border-box;
 }
@@ -272,4 +270,27 @@ body {
 }
 .registerbtn:hover {
   background-color: darkcyan;
+}
+
+
+/* Responsive adjustments to be at the very bottom of this styling file*/
+@media screen and (max-width: 600px) {
+  .modal-content {
+    width: 95%;
+    padding: 15px;
+  }
+
+  #registration-form {
+    max-width: 100%;
+  }
+
+  .finalize {
+    flex-direction: column;
+  }
+
+  .cancelbtn,
+  .registerbtn {
+    width: 100%;
+    margin: 5px 0;
+  }
 }
