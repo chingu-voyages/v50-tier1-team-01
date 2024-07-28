@@ -46,11 +46,19 @@ body {
 
 .menu-item-details {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 
 .menu-item-name {
   font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.menu-item-description {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 10px;
 }
 
 .menu-item-price {
@@ -203,24 +211,28 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 60vh;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+
 }
 
 #registration-form label {
+  width: 100%;
+  display: block;
   margin-bottom: 5px;
-  width: 280px;
-  display: inline-block;
   font-weight: bold;
-  text-align: start;
+  text-align: left;
 }
 
 #registration-form input[type='text'],
 #registration-form input[type='email'],
 #registration-form input[type='password'] {
-  width: 90%;
+  width: 100%;
   padding: 10px;
-  margin: 5px 0 22px 0;
+  margin: 5px 0 15px 0;
   background: #f1f1f1;
+  box-sizing: border-box;
 }
 
 #registration-form input[type='text']:focus,
@@ -237,6 +249,12 @@ body {
   margin-bottom: 30px;
 }
 
+.finalize {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
 .cancelbtn,
 .registerbtn {
   background-color: rgb(255, 195, 127);
@@ -244,6 +262,7 @@ body {
   cursor: pointer;
   padding: 8px 8px;
   margin: 10px 0;
+  width: 48%;
 }
 
 .cancelbtn:hover {
@@ -251,4 +270,27 @@ body {
 }
 .registerbtn:hover {
   background-color: darkcyan;
+}
+
+
+/* Responsive adjustments to be at the very bottom of this styling file*/
+@media screen and (max-width: 600px) {
+  .modal-content {
+    width: 95%;
+    padding: 15px;
+  }
+
+  #registration-form {
+    max-width: 100%;
+  }
+
+  .finalize {
+    flex-direction: column;
+  }
+
+  .cancelbtn,
+  .registerbtn {
+    width: 100%;
+    margin: 5px 0;
+  }
 }
