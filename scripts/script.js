@@ -217,6 +217,8 @@ document.addEventListener('DOMContentLoaded', () => {
   username.onblur = validateUsernameInput;
   password.onblur = validatePasswordInput;
 
+  //search bar and filter button
+
   const searchBar = document.getElementById('searchBar');
   const searchButton = document.getElementById('searchButton');
   const filterButton = document.getElementById('filterButton');
@@ -235,7 +237,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
   filterButton.addEventListener('click', () => {
-    // Add your filter logic here
     alert('Filter button clicked');
   });
 

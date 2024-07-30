@@ -272,28 +272,7 @@ body {
   background-color: darkcyan;
 }
 
-
-/* Responsive adjustments to be at the very bottom of this styling file*/
-@media screen and (max-width: 600px) {
-  .modal-content {
-    width: 95%;
-    padding: 15px;
-  }
-
-  #registration-form {
-    max-width: 100%;
-  }
-
-  .finalize {
-    flex-direction: column;
-  }
-
-  .cancelbtn,
-  .registerbtn {
-    width: 100%;
-    margin: 5px 0;
-  }
-}
+/*search and filter style*/
 
 .search-filter-container {
   display: flex;
@@ -332,3 +311,26 @@ body {
 .filter-btn i {
   margin-left: 5px;
 }
+
+/* Responsive adjustments to be at the very bottom of this styling file*/
+@media screen and (max-width: 600px) {
+  .modal-content {
+    width: 95%;
+    padding: 15px;
+  }
+
+  #registration-form {
+    max-width: 100%;
+  }
+
+  .finalize {
+    flex-direction: column;
+  }
+
+  .cancelbtn,
+  .registerbtn {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
