@@ -272,6 +272,45 @@ body {
   background-color: darkcyan;
 }
 
+/*search and filter style*/
+
+.search-filter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.search-bar {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px 0 0 20px;
+  width: 300px;
+  font-size: 16px;
+}
+
+.search-btn {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-radius: 0 20px 20px 0;
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 20px;
+  background-color: #fff;
+  border: 1px solid #000;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.filter-btn i {
+  margin-left: 5px;
+}
 
 /* Responsive adjustments to be at the very bottom of this styling file*/
 @media screen and (max-width: 600px) {
@@ -294,3 +333,4 @@ body {
     margin: 5px 0;
   }
 }
+
