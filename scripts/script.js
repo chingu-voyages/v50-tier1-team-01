@@ -216,4 +216,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
   username.onblur = validateUsernameInput;
   password.onblur = validatePasswordInput;
+
+  const searchBar = document.getElementById('searchBar');
+  const searchButton = document.getElementById('searchButton');
+  const filterButton = document.getElementById('filterButton');
+
+  searchButton.addEventListener('click', () => {
+    const query = searchBar.value.toLowerCase();
+    const menuItems = document.querySelectorAll('.menu-list-item');
+
+    menuItems.forEach(item => {
+      const itemName = item.querySelector('.menu-item-name').innerText.toLowerCase();
+      if (itemName.includes(query)) {
+        item.style.display = '';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  });
+  filterButton.addEventListener('click', () => {
+    // Add your filter logic here
+    alert('Filter button clicked');
+  });
+
 });
