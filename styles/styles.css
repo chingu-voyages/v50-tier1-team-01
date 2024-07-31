@@ -2,6 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   display: flex;
+  min-height: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -75,13 +76,21 @@ body {
   color: gold;
 }
 
+header {
+  width: 100%;
+  margin: 20px 10px;
+}
+
+main {
+  flex-grow: 1;
+}
+
 /* Button Container */
 .button-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  height: 100%;
-  margin: 60px 0;
+  margin-right: 10px;
 }
 
 .signup-btn,
@@ -257,6 +266,7 @@ body {
   display: flex;
   justify-content: center;
   background-color: rgb(255, 195, 127);
+  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
