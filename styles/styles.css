@@ -284,3 +284,12 @@ main {
   height: 2rem;
   width: 2rem;
 }
+
+.logo-container {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  align-items: left;
+  height: 100px;
+  width: 100px;
+}
