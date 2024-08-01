@@ -12,125 +12,127 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   </head>
   <body>
-    <header>
-      <div class="header-container">
-        <div class="logo-container">
-          <a href="#"><img src="/logo.png" alt="" /></a>
+    <div class="content-wrapper">
+      <header>
+        <div class="header-container">
+          <div class="logo-container">
+            <a href="/v50-tier1-team-01/"><img src="/logo.png" alt="" /></a>
+          </div>
+          <div class="button-container">
+            <button id="openSignupModalBtn" class="signup-btn">Sign Up</button>
+            <button id="openLoginModalBtn" class="login-btn">Login</button>
+          </div>
         </div>
-        <div class="button-container">
-          <button id="openSignupModalBtn" class="signup-btn">Sign Up</button>
-          <button id="openLoginModalBtn" class="login-btn">Login</button>
-        </div>
-      </div>
-    </header>
-    <div class="search-filter-container">
-      <input
-        type="text"
-        id="searchBar"
-        class="search-bar"
-        placeholder="Wood Fired Pizzas" />
-      <button id="searchButton" class="search-btn">
-        <i class="fa fa-search" aria-hidden="true"></i>
-      </button>
-      <div class="filter-dropdown">
-        <button id="filterButton" class="filter-btn">
-          Filter by <i class="fa fa-filter"></i>
+      </header>
+      <div class="search-filter-container">
+        <input
+          type="text"
+          id="searchBar"
+          class="search-bar"
+          placeholder="Wood Fired Pizzas" />
+        <button id="searchButton" class="search-btn">
+          <i class="fa fa-search" aria-hidden="true"></i>
         </button>
-        <div id="dropdownContent" class="dropdown-content">
-          <button class="dropdown-item" data-price="low">Low to High</button>
-          <button class="dropdown-item" data-price="high">High to Low</button>
+        <div class="filter-dropdown">
+          <button id="filterButton" class="filter-btn">
+            Filter by <i class="fa fa-filter"></i>
+          </button>
+          <div id="dropdownContent" class="dropdown-content">
+            <button class="dropdown-item" data-price="low">Low to High</button>
+            <button class="dropdown-item" data-price="high">High to Low</button>
+          </div>
         </div>
       </div>
-    </div>
-    <main>
-      <!-- Login Modal -->
-      <div id="loginModal" class="modal">
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <h2 id="login-title">Login</h2>
-          <form id="loginForm" action="/">
-            <div class="input-control">
-              <label for="login-username">Username</label>
-              <input type="text" id="login-username" name="username" />
-              <div class="error"></div>
-            </div>
-            <div class="input-control">
-              <label for="login-password">Password</label>
-              <input type="password" id="login-password" name="password" />
-              <div class="error"></div>
-              <button type="submit" class="login-btn">Login</button>
-            </div>
-          </form>
-        </div>
-      </div>
-      <!-- Signup Modal -->
-      <div id="signupModal" class="modal">
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <section id="registration">
-            <h2 id="registration-title">User Registration</h2>
-            <form id="registration-form">
-              <label for="signup-username">Username: </label>
-              <input
-                type="text"
-                placeholder="Enter Username"
-                id="signup-username"
-                name="username"
-                required />
-
-              <label for="email">Email: </label>
-              <input
-                type="email"
-                placeholder="Enter Email"
-                id="email"
-                name="email"
-                required />
-
-              <label for="signup-password">Password: </label>
-              <input
-                type="password"
-                placeholder="Enter Password"
-                id="signup-password"
-                name="password"
-                pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9])\S{8,}$"
-                title="Password must contain at least one number, one alphabet, one symbol, and be at least 8 characters long"
-                required />
-
-              <label for="repassword">Re-type Password: </label>
-              <input
-                type="password"
-                placeholder="Repeat Password"
-                id="repassword"
-                name="repassword"
-                required />
-
-              <label for="mobile">Contact:</label>
-              <input
-                type="text"
-                placeholder="Mobile Number"
-                id="mobile"
-                name="mobile"
-                maxlength="10"
-                required />
-              <div class="finalize">
-                <button type="button" class="cancelbtn">Cancel</button>
-                <button type="submit" class="registerbtn">Register</button>
+      <main>
+        <!-- Login Modal -->
+        <div id="loginModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="login-title">Login</h2>
+            <form id="loginForm" action="/">
+              <div class="input-control">
+                <label for="login-username">Username</label>
+                <input type="text" id="login-username" name="username" />
+                <div class="error"></div>
+              </div>
+              <div class="input-control">
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" name="password" />
+                <div class="error"></div>
+                <button type="submit" class="login-btn">Login</button>
               </div>
             </form>
-          </section>
+          </div>
         </div>
-      </div>
-      <div class="menu-div" id="menu-div">
-        <ul class="menu-list" id="menu-list"></ul>
-      </div>
-    </main>
-    <footer class="footer-container">
-      <p>&copy; 2024 Cheese Please Pizza</p>
-      <a
-        href="https://github.com/chingu-voyages/v50-tier1-team-01"
-        target="_blank"
-        ><img src="./github-mark.png" alt="github logo"
-      /></a>
-    </footer>
+        <!-- Signup Modal -->
+        <div id="signupModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <section id="registration">
+              <h2 id="registration-title">User Registration</h2>
+              <form id="registration-form">
+                <label for="signup-username">Username: </label>
+                <input
+                  type="text"
+                  placeholder="Enter Username"
+                  id="signup-username"
+                  name="username"
+                  required />
+
+                <label for="email">Email: </label>
+                <input
+                  type="email"
+                  placeholder="Enter Email"
+                  id="email"
+                  name="email"
+                  required />
+
+                <label for="signup-password">Password: </label>
+                <input
+                  type="password"
+                  placeholder="Enter Password"
+                  id="signup-password"
+                  name="password"
+                  pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9])\S{8,}$"
+                  title="Password must contain at least one number, one alphabet, one symbol, and be at least 8 characters long"
+                  required />
+
+                <label for="repassword">Re-type Password: </label>
+                <input
+                  type="password"
+                  placeholder="Repeat Password"
+                  id="repassword"
+                  name="repassword"
+                  required />
+
+                <label for="mobile">Contact:</label>
+                <input
+                  type="text"
+                  placeholder="Mobile Number"
+                  id="mobile"
+                  name="mobile"
+                  maxlength="10"
+                  required />
+                <div class="finalize">
+                  <button type="button" class="cancelbtn">Cancel</button>
+                  <button type="submit" class="registerbtn">Register</button>
+                </div>
+              </form>
+            </section>
+          </div>
+        </div>
+        <div class="menu-div" id="menu-div">
+          <ul class="menu-list" id="menu-list"></ul>
+        </div>
+      </main>
+      <footer class="footer-container">
+        <p>&copy; 2024 Cheese Please Pizza</p>
+        <a
+          href="https://github.com/chingu-voyages/v50-tier1-team-01"
+          target="_blank"
+          ><img src="./github-mark.png" alt="github logo"
+        /></a>
+      </footer>
+    </div>
   </body>
 </html>
