@@ -1,6 +1,27 @@
 const menu_list = document.querySelector('#menu-list');
 const test = document.querySelector('.test');
 
+// Function to sort and display pizzas based on the selected filter
+const filterPizzas = (order) => {
+  let pizzas = Array.from(menu_list.children);
+  pizzas.sort((a, b) => {
+    let priceA = parseFloat(a.querySelector('.menu-item-price').innerText.replace('$', ''));
+    let priceB = parseFloat(b.querySelector('.menu-item-price').innerText.replace('$', ''));
+    return order === 'low' ? priceA - priceB : priceB - priceA;
+  });
+  menu_list.innerHTML = '';
+  pizzas.forEach(pizza => menu_list.appendChild(pizza));
+};
+
+// Filter button event listener
+const dropdownItems = document.querySelectorAll('.dropdown-item');
+dropdownItems.forEach(item => {
+  item.addEventListener('click', () => {
+    const priceOrder = item.getAttribute('data-price');
+    filterPizzas(priceOrder);
+  });
+});
+
 // Array of descriptions corresponding to the menu items
 const descriptions = [
   "Chicago's famous deep-dish pizza with buttery crust and rich toppings.",
@@ -319,4 +340,24 @@ document.addEventListener('DOMContentLoaded', () => {
   password.onblur = validatePasswordInput;
 
   getMenuData();
+  //search bar and filter button
+
+  const searchBar = document.getElementById('searchBar');
+  const searchButton = document.getElementById('searchButton');
+  const filterButton = document.getElementById('filterButton');
+
+  searchButton.addEventListener('click', () => {
+    const query = searchBar.value.toLowerCase();
+    const menuItems = document.querySelectorAll('.menu-list-item');
+
+    menuItems.forEach(item => {
+      const itemName = item.querySelector('.menu-item-name').innerText.toLowerCase();
+      if (itemName.includes(query)) {
+        item.style.display = '';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  });
+
 });
