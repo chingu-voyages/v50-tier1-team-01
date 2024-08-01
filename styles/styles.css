@@ -77,8 +77,9 @@ body {
 }
 
 header {
+  background-color: #fff;
   width: 100%;
-  margin: 20px 10px;
+  margin-bottom: 20px;
 }
 
 main {
@@ -88,9 +89,8 @@ main {
 /* Button Container */
 .button-container {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-right: 10px;
+  justify-content: end;
+  margin-right: 20px;
 }
 
 .signup-btn,
@@ -285,11 +285,19 @@ main {
   width: 2rem;
 }
 
-.logo-container {
+.header-container {
   display: flex;
-  justify-content: flex-start;
-  width: 100%;
-  align-items: left;
-  height: 100px;
+  padding: 10px 5px;
+  justify-content: space-between;
+}
+
+.logo-container {
   width: 100px;
+}
+
+.logo-container img {
+  border-radius: 50%;
+  margin-left: 20px;
+  height: 60px;
+  width: 60px;
 }
