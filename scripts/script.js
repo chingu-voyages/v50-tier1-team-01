@@ -1,6 +1,58 @@
 const menu_list = document.querySelector('#menu-list');
 const test = document.querySelector('.test');
 
+// Function to sort and display pizzas based on the selected filter
+const filterPizzas = (order) => {
+  let pizzas = Array.from(menu_list.children);
+  pizzas.sort((a, b) => {
+    let priceA = parseFloat(a.querySelector('.menu-item-price').innerText.replace('$', ''));
+    let priceB = parseFloat(b.querySelector('.menu-item-price').innerText.replace('$', ''));
+    return order === 'low' ? priceA - priceB : priceB - priceA;
+  });
+  menu_list.innerHTML = '';
+  pizzas.forEach(pizza => menu_list.appendChild(pizza));
+};
+
+// Filter button event listener
+const dropdownItems = document.querySelectorAll('.dropdown-item');
+dropdownItems.forEach(item => {
+  item.addEventListener('click', () => {
+    const priceOrder = item.getAttribute('data-price');
+    filterPizzas(priceOrder);
+  });
+});
+
+// Array of descriptions corresponding to the menu items
+const descriptions = [
+  "Chicago's famous deep-dish pizza with buttery crust and rich toppings.",
+  "Crispy and thin crust pizza with a variety of toppings to choose from.",
+  "Authentic New Haven-style pizza with a chewy crust and flavorful toppings.",
+  "A pack of Chicago's deep-dish pizzas, perfect for pizza lovers.",
+  "Wood-fired pizzas with a smoky flavor, a best-seller for a reason.",
+  "Choose your favorite deep-dish pizzas, packed with hearty toppings.",
+  "Detroit-style pizza with a thick, airy crust and crispy edges.",
+  "Customize your own pack of Brooklyn-style pizzas with fresh ingredients.",
+  "Classic Chicago deep-dish pizza, a must-try for any pizza enthusiast.",
+  "A pack of 4 Lou Malnati's famous deep-dish pizzas.",
+  "Neapolitan-style pizza with fresh, high-quality ingredients.",
+  "Thin crust pizza with a variety of toppings, a customer favorite.",
+  "A pack of 10 customizable Brooklyn-style pizzas.",
+  "Mozzarella-loaded New Haven-style pizza, delicious and cheesy.",
+  "Customize your own pack of pizzas with a variety of toppings.",
+  "Authentic Margherita pizza with a coal-fired crispy crust.",
+  "Detroit-style pizza squares with a unique, flavorful taste.",
+  "Detroit pizza with a thick crust and your choice of toppings.",
+  "Chicago's pan-style deep-dish pizza, loaded with toppings.",
+  "Buffalo-style pepperoni pizza with a spicy kick.",
+  "Neapolitan pizza with a thin, soft crust and fresh ingredients.",
+  "Wood-fired pizza with a perfectly charred crust.",
+  "Thin crust pizza with a variety of fresh toppings.",
+  "New York-style pizza with a chewy, foldable crust.",
+  "Chicago deep-dish pizza with a rich, buttery crust.",
+  "Customize your own pack of pizzas from Regina Pizzeria.",
+  "Giant slices of coal-oven Margherita pizza, perfect for sharing."
+];
+
 async function getMenuData() {
   const url = 'https://menus-api.vercel.app';
   try {
@@ -16,6 +68,11 @@ async function getMenuData() {
     // Select the first 20 pizza items
     const pizzas_selected = pizzas_all.slice(0, 20);
 
+    // Adding descriptions to the selected pizza items
+    pizzas_selected.forEach((pizza, index) => {
+      pizza.description = descriptions[index];
+    });
+
     // Create tile for each pizza
     for (let i = 0; i < 6; i++) {
       menu_list.innerHTML += `
@@ -28,6 +85,7 @@ async function getMenuData() {
               <div class="primary-menu-item-details-div">
                 <div class="menu-item-details">
                   <div class="menu-item-name"> ${pizzas_selected[i].dsc} </div>
+                  <div class="menu-item-description"> ${pizzas_selected[i].description} </div>
                   <div class="menu-item-price"> $${
                     pizzas_selected[i].price
                   } </div>
@@ -179,4 +237,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
   username.onblur = validateUsernameInput;
   password.onblur = validatePasswordInput;
+
+  //search bar and filter button
+
+  const searchBar = document.getElementById('searchBar');
+  const searchButton = document.getElementById('searchButton');
+  const filterButton = document.getElementById('filterButton');
+
+  searchButton.addEventListener('click', () => {
+    const query = searchBar.value.toLowerCase();
+    const menuItems = document.querySelectorAll('.menu-list-item');
+
+    menuItems.forEach(item => {
+      const itemName = item.querySelector('.menu-item-name').innerText.toLowerCase();
+      if (itemName.includes(query)) {
+        item.style.display = '';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  });
+
 });
