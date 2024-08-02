@@ -103,9 +103,12 @@ function displayRating(rating_score) {
 
 getMenuData().then(() => {
   const addToBasketButtons = document.querySelectorAll(".add-to-basket-button");
+  const menuCustomization = document.querySelector("#menu-customization") ;
   addToBasketButtons.forEach(button => {
       button.addEventListener("click", () => {
           console.log("Hello");
+          menuCustomization.style.display = 'block';
+
       });
   });
 });
