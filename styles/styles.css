@@ -312,6 +312,43 @@ body {
   margin-left: 5px;
 }
 
+/*payment options styling starts here NEW*/
+
+#login-credit {
+  width: 60%;
+}
+
+.basket-btn {
+  padding: 10px 20px;
+  margin-left: 20px;
+  font-size: 16px;
+  color: #ffffff;
+  border-radius: 10px;
+  background-color: #3f93ec;
+  border: none;
+  cursor: pointer;
+}
+
+#basketItems {
+  list-style-type: none;
+  padding: 0;
+}
+
+#basketItems li {
+  margin-bottom: 10px;
+}
+
+.checkout-btn, .pay-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  background-color: #3f93ec;
+  border: none;
+  cursor: pointer;
+}
+/*payment options styling ends here*/
+
+
 .filter-dropdown {
   position: relative;
   display: inline-block;
@@ -362,4 +399,3 @@ body {
     margin: 5px 0;
   }
 }
-
