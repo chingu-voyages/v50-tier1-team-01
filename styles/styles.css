@@ -320,6 +320,13 @@ body {
   margin: auto;
 }
 
+#menu-customization-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 50px;
+}
+
 /* Responsive adjustments to be at the very bottom of this styling file*/
 @media screen and (max-width: 600px) {
   .modal-content {
