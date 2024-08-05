@@ -107,10 +107,11 @@
 
       <form id="menu-customization" class="modal">
         <fieldset>
-          <legend>Please customize your pizza:</legend>
+          <div class="menu-customization">
+          <legend>Customize your pizza:</legend>
 
           <div id="base-customization" class="base-customization">
-            <legend>Choose Your Base</legend>
+            <legend>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BASE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</legend>
             <input type="radio" id="original-base" name="base-option" value="original-base" />
             <label for="original-base">Original</label>
 
@@ -122,7 +123,7 @@
           </div>
 
           <div id="cheese-customization" class="cheese-customization">
-            <legend>Cheese Option</legend>
+            <legend>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CHEESE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</legend>
             <input type="radio" id="normal-mozzaralla" class="cheese-option" value="normal-mozzaralla" />
             <label for="normal-mozzaralla">Normal Mozzaralla</label>
 
@@ -134,7 +135,7 @@
           </div>
 
           <div id="toppings-customizations" class="toppings-customizations">
-            <legend>Extra Toppings</legend>
+            <legend>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TOPPINGS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</legend>
             <input type="checkbox" id="garlic-topping" class="toppings-option" value="garlic-topping" />
             <label for="garlic-topping">Garlic</label>
 
@@ -172,8 +173,10 @@
 
 
           <div>
-            <button type="submit">Save To Basket</button>
+            <button type="submit">Add To Basket</button>
           </div>
+          </div>
+        </div>
         </fieldset>
       </form>
 
