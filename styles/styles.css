@@ -312,6 +312,13 @@ body {
   margin-left: 5px;
 }
 
+.menu-customization {
+  width: 1280px;
+  height: 832px;
+  background-color: #fff;
+  border-radius: 25px;
+}
+
 /* Responsive adjustments to be at the very bottom of this styling file*/
 @media screen and (max-width: 600px) {
   .modal-content {
