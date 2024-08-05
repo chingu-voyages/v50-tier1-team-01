@@ -327,6 +327,10 @@ body {
   padding: 50px;
 }
 
+.base-customization > input {
+  border: 1px solid #000;
+}
+
 /* Responsive adjustments to be at the very bottom of this styling file*/
 @media screen and (max-width: 600px) {
   .modal-content {
