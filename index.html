@@ -10,27 +10,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   </head>
   <body>
-    <header>
-      <div class="button-container">
-        <button id="openSignupModalBtn" class="signup-btn">Sign Up</button>
-        <button id="openLoginModalBtn" class="login-btn">Login</button>
-
-        <!--Orders basket icon view NEW-->
-        <button id="basketBtn" class="basket-btn">Basket (<span id="basketCount">0</span>)</button>
-      </div>
-    </header>
-    <div class="search-filter-container">
-      <input type="text" id="searchBar" class="search-bar" placeholder="Wood Fired Pizzas" />
+    <header id="header-section">
+      <img src="images/logo.png" alt="logo" id="logo">
+      <p id="logo-name">PIZZA HUB</p>
       <button id="searchButton" class="search-btn">
         <i class="fa fa-search" aria-hidden="true"></i>
       </button>
+      <input type="text" id="searchBar" class="search-bar" placeholder="Search Pizza Hub" />
+      <div class="button-container">
+        <button id="openLoginModalBtn" class="login-btn">Login</button>
+        <button id="openSignupModalBtn" class="signup-btn">Sign Up</button>       
+        <!--Orders basket icon view NEW-->
+        <button id="basketBtn" class="basket-btn"><i class="fa-solid fa-cart-shopping"></i>(<span id="basketCount">0</span>)</button>
+      </div>
+    </header>
+    <div id="filter-section">
+
       <div class="filter-dropdown">
-        <button id="filterButton" class="filter-btn">Filter by <i class="fa fa-filter"></i></button>
+        <button id="filterButton" class="filter-btn">Sort by <i class="fa-solid fa-caret-down"></i></button>
         <div id="dropdownContent" class="dropdown-content">
-          <button class="dropdown-item" data-price="low">Low to High</button>
+          <button class="dropdown-item" data-price="low">Low to High </button>
           <button class="dropdown-item" data-price="high">High to Low</button>
         </div>
       </div>
+
     </div>
     <main>
       <!-- Login Modal -->
