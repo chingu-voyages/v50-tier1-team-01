@@ -145,7 +145,7 @@ body {
 .basket-heading {
   margin-top: 20px;
   font-size: 31px;
-  
+  font-weight: 590px;
 }
 
 .close {
@@ -347,10 +347,11 @@ body {
 .pay-btn {
   padding: 10px 20px;
   font-size: 16px;
-  border-radius: 10px;
-  background-color: #3f93ec;
+  border-radius: 52px;
+  background-color: #f5d187;
   border: none;
   cursor: pointer;
+  width: 120px;
 }
 /*payment options styling ends here*/
 
