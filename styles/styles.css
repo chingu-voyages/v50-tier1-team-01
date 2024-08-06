@@ -129,23 +129,29 @@ body {
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
-  padding-top: 60px;
+  padding-top: 160px;
 }
 
 .modal-content {
   background-color: #fefefe;
   border-radius: 1rem;
-  margin: 0 auto;
   padding: 20px 10px;
-  width: 80%;
-  max-width: 600px;
+  height: 630px;
+  width: 532px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.basket-heading {
+  margin-top: 20px;
+  font-size: 31px;
+  
 }
 
 .close {
-  color: red;
+  color: #000;
   float: right;
   font-size: 28px;
-  font-weight: bold;
   margin-right: 10px;
 }
 
@@ -214,7 +220,6 @@ body {
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
-
 }
 
 #registration-form label {
@@ -338,7 +343,8 @@ body {
   margin-bottom: 10px;
 }
 
-.checkout-btn, .pay-btn {
+.checkout-btn,
+.pay-btn {
   padding: 10px 20px;
   font-size: 16px;
   border-radius: 10px;
@@ -347,7 +353,6 @@ body {
   cursor: pointer;
 }
 /*payment options styling ends here*/
-
 
 .filter-dropdown {
   position: relative;
