@@ -135,17 +135,12 @@ body {
 .modal-content {
   background-color: #fefefe;
   border-radius: 1rem;
-  padding: 20px 10px;
+  padding: 20px 25px;
   height: 630px;
   width: 532px;
   margin: 0 auto;
   text-align: center;
-}
-
-.basket-heading {
-  margin-top: 20px;
-  font-size: 31px;
-  font-weight: 590px;
+  position: relative;
 }
 
 .close {
@@ -337,6 +332,9 @@ body {
 #basketItems {
   list-style-type: none;
   padding: 0;
+  margin-top: 30px;
+  margin-bottom: 180px;
+  font-size: 18px;
 }
 
 #basketItems li {
@@ -382,6 +380,73 @@ body {
 
 .filter-dropdown:hover .dropdown-content {
   display: block;
+}
+
+/* Basket styles */
+
+.basket-heading {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-size: 31px;
+  font-weight: 590px;
+}
+
+.basket-title {
+  text-transform: uppercase;
+  letter-spacing: 7px;
+}
+
+.basket-summary {
+  display: flex;
+  justify-content: space-between;
+}
+
+.basket-prelim {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+#basketTotal {
+  font-weight: bold;
+}
+
+.thanks-box {
+  background-color: #fcf6ea;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px;
+  border-radius: 5px;
+}
+
+.thanks-box p {
+  font-size: 24px;
+}
+
+.basket-total {
+  display: flex;
+  justify-content: space-between;
+}
+
+.basket-checkout {
+  position: absolute;
+  bottom: 0;
+}
+
+.basket-total {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.checkout-price {
+  color: #d42828;
+}
+
+.remove-from-basket-button {
+  background-color: #fff;
+  color: #d42828;
+  display: block;
+  text-align: left;
 }
 
 /* Responsive adjustments to be at the very bottom of this styling file*/

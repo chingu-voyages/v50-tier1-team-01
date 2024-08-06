@@ -141,23 +141,27 @@
         <div class="modal-content">
           <span class="close">&times;</span>
           <p class="basket-heading">Your basket</p>
-          <div>
-            <p>pizza hub</p>
+          <div class="basket-summary">
+            <div class="basket-title">
+              <p>pizza hub</p>
+            </div>
+            <div class="basket-prelim">
+              <p>Total: <strong>$</strong><span id="basketTotal">0.00</span></p>
+              <p>Tue 6, Aug 2024</p>
+            </div>
           </div>
-          <div>
-            <p>Total: $<span id="basketTotal">0.00</span></p>
-            <p>Tue 6, Aug 2024</p>
-          </div>
-          <div>
-            <p>Thanks for your order, {name}</p>
-            <img src="" alt="" />
+          <div class="thanks-box">
+            <p>Thanks for your order</p>
+            <img src="/logo.png" alt="" />
           </div>
           <ul id="basketItems"></ul>
-          <div>
-            <p>Total</p>
-            <p>$139</p>
+          <div class="basket-checkout">
+            <div class="basket-total">
+              <p>Total</p>
+              <p class="checkout-price">$139</p>
+            </div>
+            <button id="checkoutBtn" class="checkout-btn">Checkout</button>
           </div>
-          <button id="checkoutBtn" class="checkout-btn">Checkout</button>
         </div>
       </div>
 
