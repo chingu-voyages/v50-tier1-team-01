@@ -136,11 +136,9 @@ body {
   background-color: #fefefe;
   border-radius: 1rem;
   padding: 20px 25px;
-  height: 630px;
+  height: 100%;
   width: 532px;
   margin: 0 auto;
-  text-align: center;
-  position: relative;
 }
 
 .close {
@@ -332,8 +330,9 @@ body {
 #basketItems {
   list-style-type: none;
   padding: 0;
+  overflow-y: auto;
+  height: 300px;
   margin-top: 30px;
-  margin-bottom: 180px;
   font-size: 18px;
 }
 
@@ -388,7 +387,6 @@ body {
   margin-top: 20px;
   margin-bottom: 40px;
   font-size: 31px;
-  font-weight: 590px;
 }
 
 .basket-title {
@@ -429,8 +427,6 @@ body {
 }
 
 .basket-checkout {
-  position: absolute;
-  bottom: 0;
 }
 
 .basket-total {
