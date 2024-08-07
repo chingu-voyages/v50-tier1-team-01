@@ -434,6 +434,12 @@ body {
   font-weight: bold;
 }
 
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
 .checkout-price {
   color: #d42828;
 }
