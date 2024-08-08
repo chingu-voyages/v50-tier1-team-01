@@ -203,7 +203,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-
    // When the user clicks the login button, open the login modal
   openLoginModalBtn.onclick = function () {
     loginModal.style.display = 'block';

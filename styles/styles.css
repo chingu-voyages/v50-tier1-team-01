@@ -339,6 +339,111 @@ body {
   outline-offset: 2px;
 }
 
+/*search and filter style*/
+
+.search-filter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.search-bar {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px 0 0 20px;
+  width: 300px;
+  font-size: 16px;
+}
+
+.search-btn {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-radius: 0 20px 20px 0;
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 20px;
+  background-color: #fff;
+  border: 1px solid #000;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.filter-btn i {
+  margin-left: 5px;
+}
+
+/*payment options styling starts here NEW*/
+
+#login-credit {
+  width: 60%;
+}
+
+.basket-btn {
+  padding: 10px 20px;
+  margin-left: 20px;
+  font-size: 16px;
+  color: #ffffff;
+  border-radius: 10px;
+  background-color: #3f93ec;
+  border: none;
+  cursor: pointer;
+}
+
+#basketItems {
+  list-style-type: none;
+  padding: 0;
+}
+
+#basketItems li {
+  margin-bottom: 10px;
+}
+
+.checkout-btn, .pay-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  background-color: #3f93ec;
+  border: none;
+  cursor: pointer;
+}
+/*payment options styling ends here*/
+
+
+.filter-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content .dropdown-item {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content .dropdown-item:hover {
+  background-color: #ddd;
+}
+
+.filter-dropdown:hover .dropdown-content {
+  display: block;
+}
 
 /*payment options styling starts here NEW*/
 

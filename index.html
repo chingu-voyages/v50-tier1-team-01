@@ -19,6 +19,19 @@
 
       </div>
     </header>
+    <div class="search-filter-container">
+      <input type="text" id="searchBar" class="search-bar" placeholder="Wood Fired Pizzas" />
+      <button id="searchButton" class="search-btn">
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </button>
+      <div class="filter-dropdown">
+        <button id="filterButton" class="filter-btn">Filter by <i class="fa fa-filter"></i></button>
+        <div id="dropdownContent" class="dropdown-content">
+          <button class="dropdown-item" data-price="low">Low to High</button>
+          <button class="dropdown-item" data-price="high">High to Low</button>
+        </div>
+      </div>
+    </div>
     <main>
       <!-- Login Modal -->
 
