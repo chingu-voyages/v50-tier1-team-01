@@ -5,17 +5,21 @@ const test = document.querySelector('.test');
 const filterPizzas = (order) => {
   let pizzas = Array.from(menu_list.children);
   pizzas.sort((a, b) => {
-    let priceA = parseFloat(a.querySelector('.menu-item-price').innerText.replace('$', ''));
-    let priceB = parseFloat(b.querySelector('.menu-item-price').innerText.replace('$', ''));
+    let priceA = parseFloat(
+      a.querySelector('.menu-item-price').innerText.replace('$', '')
+    );
+    let priceB = parseFloat(
+      b.querySelector('.menu-item-price').innerText.replace('$', '')
+    );
     return order === 'low' ? priceA - priceB : priceB - priceA;
   });
   menu_list.innerHTML = '';
-  pizzas.forEach(pizza => menu_list.appendChild(pizza));
+  pizzas.forEach((pizza) => menu_list.appendChild(pizza));
 };
 
 // Filter button event listener
 const dropdownItems = document.querySelectorAll('.dropdown-item');
-dropdownItems.forEach(item => {
+dropdownItems.forEach((item) => {
   item.addEventListener('click', () => {
     const priceOrder = item.getAttribute('data-price');
     filterPizzas(priceOrder);
@@ -25,32 +29,32 @@ dropdownItems.forEach(item => {
 // Array of descriptions corresponding to the menu items
 const descriptions = [
   "Chicago's famous deep-dish pizza with buttery crust and rich toppings.",
-  "Crispy and thin crust pizza with a variety of toppings to choose from.",
-  "Authentic New Haven-style pizza with a chewy crust and flavorful toppings.",
+  'Crispy and thin crust pizza with a variety of toppings to choose from.',
+  'Authentic New Haven-style pizza with a chewy crust and flavorful toppings.',
   "A pack of Chicago's deep-dish pizzas, perfect for pizza lovers.",
-  "Wood-fired pizzas with a smoky flavor, a best-seller for a reason.",
-  "Choose your favorite deep-dish pizzas, packed with hearty toppings.",
-  "Detroit-style pizza with a thick, airy crust and crispy edges.",
-  "Customize your own pack of Brooklyn-style pizzas with fresh ingredients.",
-  "Classic Chicago deep-dish pizza, a must-try for any pizza enthusiast.",
+  'Wood-fired pizzas with a smoky flavor, a best-seller for a reason.',
+  'Choose your favorite deep-dish pizzas, packed with hearty toppings.',
+  'Detroit-style pizza with a thick, airy crust and crispy edges.',
+  'Customize your own pack of Brooklyn-style pizzas with fresh ingredients.',
+  'Classic Chicago deep-dish pizza, a must-try for any pizza enthusiast.',
   "A pack of 4 Lou Malnati's famous deep-dish pizzas.",
-  "Neapolitan-style pizza with fresh, high-quality ingredients.",
-  "Thin crust pizza with a variety of toppings, a customer favorite.",
-  "A pack of 10 customizable Brooklyn-style pizzas.",
-  "Mozzarella-loaded New Haven-style pizza, delicious and cheesy.",
-  "Customize your own pack of pizzas with a variety of toppings.",
-  "Authentic Margherita pizza with a coal-fired crispy crust.",
-  "Detroit-style pizza squares with a unique, flavorful taste.",
-  "Detroit pizza with a thick crust and your choice of toppings.",
+  'Neapolitan-style pizza with fresh, high-quality ingredients.',
+  'Thin crust pizza with a variety of toppings, a customer favorite.',
+  'A pack of 10 customizable Brooklyn-style pizzas.',
+  'Mozzarella-loaded New Haven-style pizza, delicious and cheesy.',
+  'Customize your own pack of pizzas with a variety of toppings.',
+  'Authentic Margherita pizza with a coal-fired crispy crust.',
+  'Detroit-style pizza squares with a unique, flavorful taste.',
+  'Detroit pizza with a thick crust and your choice of toppings.',
   "Chicago's pan-style deep-dish pizza, loaded with toppings.",
-  "Buffalo-style pepperoni pizza with a spicy kick.",
-  "Neapolitan pizza with a thin, soft crust and fresh ingredients.",
-  "Wood-fired pizza with a perfectly charred crust.",
-  "Thin crust pizza with a variety of fresh toppings.",
-  "New York-style pizza with a chewy, foldable crust.",
-  "Chicago deep-dish pizza with a rich, buttery crust.",
-  "Customize your own pack of pizzas from Regina Pizzeria.",
-  "Giant slices of coal-oven Margherita pizza, perfect for sharing."
+  'Buffalo-style pepperoni pizza with a spicy kick.',
+  'Neapolitan pizza with a thin, soft crust and fresh ingredients.',
+  'Wood-fired pizza with a perfectly charred crust.',
+  'Thin crust pizza with a variety of fresh toppings.',
+  'New York-style pizza with a chewy, foldable crust.',
+  'Chicago deep-dish pizza with a rich, buttery crust.',
+  'Customize your own pack of pizzas from Regina Pizzeria.',
+  'Giant slices of coal-oven Margherita pizza, perfect for sharing.',
 ];
 
 //credit update feature
@@ -80,7 +84,7 @@ async function getMenuData() {
     // Create tile for each pizza
 
     menu_list.innerHTML = '';
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 20; i++) {
       const pizza = pizzas_selected[i];
       const listItem = document.createElement('li');
       listItem.className = 'menu-list-item';
@@ -97,7 +101,9 @@ async function getMenuData() {
             </div>
             <div class="menu-item-details">
               <div class="menu-item-rating">${displayRating(pizza.rate)}</div>
-              <button class="add-to-basket-button" data-pizza='${JSON.stringify(pizza)}'>Add</button>
+              <button class="add-to-basket-button" data-pizza='${JSON.stringify(
+                pizza
+              )}'>Add</button>
             </div>
           </div>
         </div>
@@ -127,13 +133,13 @@ function displayRating(rating_score) {
 function addToBasket(pizza) {
   basket.push(pizza);
   updateBasketDisplay();
-    // Optional confirmation message we can have this feature or remove it.
-    alert(`Added ${pizza.dsc} to your basket!`);
+  // Optional confirmation message we can have this feature or remove it.
+  alert(`Added ${pizza.dsc} to your basket!`);
 }
 
 //remove items from basket individually
 function removeFromBasket(pizza) {
-  basket = basket.filter(item => item.dsc !== pizza.dsc);
+  basket = basket.filter((item) => item.dsc !== pizza.dsc);
   updateBasketDisplay();
 }
 
@@ -142,27 +148,33 @@ function updateBasketDisplay() {
   const basketItems = document.getElementById('basketItems');
   const basketTotal = document.getElementById('basketTotal');
   const checkoutTotal = document.getElementById('checkoutTotal');
+  const finalTotal = document.getElementById('finalTotal');
 
   basketCount.textContent = basket.length;
   basketItems.innerHTML = '';
   let total = 0;
 
-  basket.forEach(pizza => {
+  basket.forEach((pizza) => {
     const li = document.createElement('li');
-    li.innerHTML = `${pizza.dsc} - $${pizza.price} <button class="remove-from-basket-button" data-pizza='${JSON.stringify(pizza)}'>Remove</button>`;
+    li.innerHTML = `${pizza.dsc} - $${
+      pizza.price
+    } <button class="remove-from-basket-button" data-pizza='${JSON.stringify(
+      pizza
+    )}'>Remove</button>`;
     basketItems.appendChild(li);
     total += pizza.price;
   });
 
   basketTotal.textContent = total.toFixed(2);
   checkoutTotal.textContent = total.toFixed(2);
+  finalTotal.textContent = total.toFixed(2);
 }
 
 function updateAvailableCredit() {
-  document.getElementById('availableCredit').textContent = userCredit.toFixed(2);
+  document.getElementById('availableCredit').textContent =
+    userCredit.toFixed(2);
 }
 //basket and credit update functionality ends here
-
 
 document.addEventListener('DOMContentLoaded', () => {
   const loginModal = document.getElementById('loginModal'); //main login modal
@@ -180,30 +192,28 @@ document.addEventListener('DOMContentLoaded', () => {
   let username = document.getElementById('login-username');
   let password = document.getElementById('login-password');
 
+  //This event listener responds to the 'add' button clicks in the menu
+  document.addEventListener('click', (event) => {
+    // Add to Basket
+    if (event.target.classList.contains('add-to-basket-button')) {
+      const pizzaData = JSON.parse(event.target.getAttribute('data-pizza'));
+      addToBasket(pizzaData);
+    }
+    // Remove from Basket
+    else if (event.target.classList.contains('remove-from-basket-button')) {
+      const pizzaData = JSON.parse(event.target.getAttribute('data-pizza'));
+      removeFromBasket(pizzaData);
+    }
+  });
 
+  basketItems.addEventListener('click', (event) => {
+    if (event.target.classList.contains('remove-from-basket-button')) {
+      const pizzaData = JSON.parse(event.target.getAttribute('data-pizza'));
+      removeFromBasket(pizzaData);
+    }
+  });
 
-    //This event listener responds to the 'add' button clicks in the menu
-    document.addEventListener('click', (event) => {
-      // Add to Basket
-      if (event.target.classList.contains('add-to-basket-button')) {
-        const pizzaData = JSON.parse(event.target.getAttribute('data-pizza'));
-        addToBasket(pizzaData);
-      }
-      // Remove from Basket
-      else if (event.target.classList.contains('remove-from-basket-button')) {
-        const pizzaData = JSON.parse(event.target.getAttribute('data-pizza'));
-        removeFromBasket(pizzaData);
-      }
-    });
-
-    basketItems.addEventListener('click', (event) => {
-      if (event.target.classList.contains('remove-from-basket-button')) {
-        const pizzaData = JSON.parse(event.target.getAttribute('data-pizza'));
-        removeFromBasket(pizzaData);
-      }
-    });
-
-   // When the user clicks the login button, open the login modal
+  // When the user clicks the login button, open the login modal
   openLoginModalBtn.onclick = function () {
     loginModal.style.display = 'block';
   };
@@ -213,7 +223,7 @@ document.addEventListener('DOMContentLoaded', () => {
     signupModal.style.display = 'block';
   };
 
-  basketBtn.onclick = () => basketModal.style.display = 'block';
+  basketBtn.onclick = () => (basketModal.style.display = 'block');
 
   checkoutBtn.onclick = () => {
     checkoutModal.style.display = 'block';
@@ -222,7 +232,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //payment acceptance based on order and available credit. NEW.
   payBtn.onclick = () => {
-    const total = parseFloat(document.getElementById('checkoutTotal').textContent);
+    const total = parseFloat(
+      document.getElementById('checkoutTotal').textContent
+    );
     if (total <= userCredit) {
       userCredit -= total;
       alert('Payment successful! Thank you for your order.');
@@ -350,8 +362,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const query = searchBar.value.toLowerCase();
     const menuItems = document.querySelectorAll('.menu-list-item');
 
-    menuItems.forEach(item => {
-      const itemName = item.querySelector('.menu-item-name').innerText.toLowerCase();
+    menuItems.forEach((item) => {
+      const itemName = item
+        .querySelector('.menu-item-name')
+        .innerText.toLowerCase();
       if (itemName.includes(query)) {
         item.style.display = '';
       } else {
@@ -359,5 +373,27 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-
 });
+
+function formatDate(date) {
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  return date.toLocaleDateString(undefined, options);
+}
+
+// Function to format the current time
+function formatTime(date) {
+  const options = { hour: 'numeric', minute: 'numeric', second: 'numeric' };
+  return date.toLocaleTimeString(undefined, options);
+}
+
+// Function to display the current date and time
+function displayCurrentDateTime() {
+  const currentDateTimeElement = document.getElementById('currentDateTime');
+  const currentDate = new Date();
+  const formattedDate = formatDate(currentDate);
+  const formattedTime = formatTime(currentDate);
+  currentDateTimeElement.textContent += `${formattedDate} ${formattedTime}`;
+}
+
+// Call the function to display the date and time when the page loads
+window.onload = displayCurrentDateTime;

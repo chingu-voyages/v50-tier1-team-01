@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/styles.css" />
     <title>Pizza App</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   </head>
   <body>
     <header>
@@ -16,16 +18,24 @@
         <button id="openLoginModalBtn" class="login-btn">Login</button>
 
         <!--Orders basket icon view NEW-->
-        <button id="basketBtn" class="basket-btn">Basket (<span id="basketCount">0</span>)</button>
+        <button id="basketBtn" class="basket-btn">
+          Basket (<span id="basketCount">0</span>)
+        </button>
       </div>
     </header>
     <div class="search-filter-container">
-      <input type="text" id="searchBar" class="search-bar" placeholder="Wood Fired Pizzas" />
+      <input
+        type="text"
+        id="searchBar"
+        class="search-bar"
+        placeholder="Wood Fired Pizzas" />
       <button id="searchButton" class="search-btn">
         <i class="fa fa-search" aria-hidden="true"></i>
       </button>
       <div class="filter-dropdown">
-        <button id="filterButton" class="filter-btn">Filter by <i class="fa fa-filter"></i></button>
+        <button id="filterButton" class="filter-btn">
+          Filter by <i class="fa fa-filter"></i>
+        </button>
         <div id="dropdownContent" class="dropdown-content">
           <button class="dropdown-item" data-price="low">Low to High</button>
           <button class="dropdown-item" data-price="high">High to Low</button>
@@ -52,7 +62,13 @@
               <!--Payment options credit control NEW-->
               <div class="input-control">
                 <label for="login-credit">Add Credit Amount ($)</label>
-                <input type="number" id="login-credit" name="credit" min="0" step="0.01" required />
+                <input
+                  type="number"
+                  id="login-credit"
+                  name="credit"
+                  min="0"
+                  step="0.01"
+                  required />
                 <div class="error"></div>
               </div>
               <!--Payment options credit control ends here-->
@@ -121,26 +137,61 @@
       </div>
 
       <!-- Order basket Modal NEW-->
-  <div id="basketModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Your Basket</h2>
-      <ul id="basketItems"></ul>
-      <p>Total: $<span id="basketTotal">0.00</span></p>
-      <button id="checkoutBtn" class="checkout-btn">Checkout</button>
-    </div>
-  </div>
+      <div id="basketModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p class="basket-heading">Your basket</p>
+          <div class="basket-summary">
+            <div class="basket-title">
+              <p>pizza hub</p>
+            </div>
+            <div class="basket-prelim">
+              <p>Total: <strong>$</strong><span id="basketTotal">0.00</span></p>
+              <p id="currentDateTime"></p>
+            </div>
+          </div>
+          <div class="thanks-box">
+            <p>Thanks for your order</p>
+            <img src="/logo.png" alt="" />
+          </div>
+          <ul id="basketItems"></ul>
+          <div class="basket-checkout">
+            <div class="basket-total">
+              <p>Total</p>
+              <p class="checkout-price">
+                <strong>$</strong><span id="finalTotal">0.00</span>
+              </p>
+            </div>
+            <div class="button-container">
+              <button id="checkoutBtn" class="checkout-btn">Checkout</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  <!-- Checkout Modal NEW-->
-  <div id="checkoutModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Checkout</h2>
-      <p>Total: $<span id="checkoutTotal">0.00</span></p>
-      <p>Available Credit: $<span id="availableCredit">0.00</span></p>
-      <button id="payBtn" class="pay-btn">Pay</button>
-    </div>
-  </div>
+      <!-- Checkout Modal NEW-->
+      <div id="checkoutModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p class="checkout-heading">Checkout</p>
+          <div class="checkout-logo">
+            <img src="/logo.png" alt="" />
+          </div>
+          <div class="total-container">
+            <p class="checkout-text">
+              Total:<span class="checkout-total"> $</span
+              ><span id="checkoutTotal" class="checkout-total">0.00</span>
+            </p>
+          </div>
+          <p class="checkout-text">
+            Available Credit:<span class="checkout-credit"> $</span
+            ><span id="availableCredit" class="checkout-credit">0.00</span>
+          </p>
+          <div class="pay-container">
+            <button id="payBtn" class="pay-btn">Pay</button>
+          </div>
+        </div>
+      </div>
       <div class="menu-div" id="menu-div">
         <ul class="menu-list" id="menu-list"></ul>
       </div>
