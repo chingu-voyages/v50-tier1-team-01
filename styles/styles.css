@@ -96,7 +96,7 @@ body {
 /* Login button styling */
 #loginForm  .login-btn {
   width: 40%;
-  background-color: transparent;  /* Makes background transparent */
+  background-color: #F5D187;  /* Sets the idle mode background color */
   border: 1px solid black;
   padding: 4px 10px;
   margin-left: 90px;
@@ -107,7 +107,7 @@ body {
 /*Styling for the button on hover*/
 #loginForm .login-btn:hover {
   width: 40%;
-  background-color: #FCF6EA;
+  background-color: #E8A722;
   border: 1px solid black;  /* Keeps border on hover */
   padding: 4px 10px;
   font-size: 16px;
@@ -116,7 +116,7 @@ body {
   }
 
   #loginForm .login-btn:active {
-    background-color: #f1e0be;  /* Changes background color when clicked */
+    background-color: #e6a626;  /* Changes background color when clicked */
     outline: 1px solid black;
     outline-offset: 2px;
   }

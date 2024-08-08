@@ -81,7 +81,7 @@ async function getMenuData() {
     // Create tile for each pizza
 
     menu_list.innerHTML = '';
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 20; i++) {
       const pizza = pizzas_selected[i];
       const listItem = document.createElement('li');
       listItem.className = 'menu-list-item';
