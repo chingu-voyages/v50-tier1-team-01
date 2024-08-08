@@ -440,15 +440,56 @@ body {
   margin: 0 auto;
 }
 
-.checkout-price {
+/* Checkout styles */
+
+.checkout-price,
+.checkout-total,
+.checkout-credit {
   color: #d42828;
 }
 
-.remove-from-basket-button {
+.checkout-heading {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-size: 31px;
+}
+
+.checkout-logo {
+  display: flex;
+  justify-content: center;
+}
+
+.checkout-text {
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.checkout .remove-from-basket-button {
   background-color: #fff;
   color: #d42828;
   display: block;
   text-align: left;
+}
+
+.total-container {
+  margin-top: 60px;
+  margin-bottom: 10px;
+}
+
+.pay-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+
+/* Styling currency */
+
+.currency-styles {
+  display: flex;
+  font-weight: bold;
+  color: #d42828;
 }
 
 /* Responsive adjustments to be at the very bottom of this styling file*/

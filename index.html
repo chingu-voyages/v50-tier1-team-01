@@ -173,10 +173,23 @@
       <div id="checkoutModal" class="modal">
         <div class="modal-content">
           <span class="close">&times;</span>
-          <h2>Checkout</h2>
-          <p>Total: $<span id="checkoutTotal">0.00</span></p>
-          <p>Available Credit: $<span id="availableCredit">0.00</span></p>
-          <button id="payBtn" class="pay-btn">Pay</button>
+          <p class="checkout-heading">Checkout</p>
+          <div class="checkout-logo">
+            <img src="/logo.png" alt="" />
+          </div>
+          <div class="total-container">
+            <p class="checkout-text">
+              Total:<span class="checkout-total"> $</span
+              ><span id="checkoutTotal" class="checkout-total">0.00</span>
+            </p>
+          </div>
+          <p class="checkout-text">
+            Available Credit:<span class="checkout-credit"> $</span
+            ><span id="availableCredit" class="checkout-credit">0.00</span>
+          </p>
+          <div class="pay-container">
+            <button id="payBtn" class="pay-btn">Pay</button>
+          </div>
         </div>
       </div>
       <div class="menu-div" id="menu-div">
