@@ -1,3 +1,4 @@
+/* General body styling */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -8,7 +9,7 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
-
+/* Menu list styling */
 .menu-list {
   display: flex;
   flex-wrap: wrap;
@@ -17,7 +18,7 @@ body {
 }
 
 .menu-image-div {
-  width: 200px;
+  width: 200px;   /* Sets a fixed width for the image container */
 }
 
 .menu-item-image {
@@ -83,34 +84,44 @@ body {
   color: gold;
 }
 
-/* Button Container */
+/* Button container styling*/
 .button-container {
-  display: flex;
+  display: flex;  /* Uses flexbox for layout */
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 100%;   /* Takes up full height of the container */
   margin: 60px 0;
 }
 
-.signup-btn,
-.login-btn {
-  padding: 10px 20px;
+/* Login button styling */
+#loginForm  .login-btn {
+  width: 40%;
+  background-color: transparent;  /* Makes background transparent */
+  border: 1px solid black;
+  padding: 4px 10px;
+  margin-left: 90px;
   font-size: 16px;
-  border-radius: 10px;
-  background-color: rgb(255, 195, 127);
-  border: none;
+  border-radius: 30px;
+}
+
+/*Styling for the button on hover*/
+#loginForm .login-btn:hover {
+  width: 40%;
+  background-color: #FCF6EA;
+  border: 1px solid black;  /* Keeps border on hover */
+  padding: 4px 10px;
+  font-size: 16px;
+  border-radius: 30px;
   cursor: pointer;
-}
+  }
 
-.signup-btn {
-  margin-right: 20px;
-}
+  #loginForm .login-btn:active {
+    background-color: #f1e0be;  /* Changes background color when clicked */
+    outline: 1px solid black;
+    outline-offset: 2px;
+  }
 
-.signup-btn:hover,
-.login-btn:hover {
-  background-color: darkcyan;
-}
-
+/* Modal button styling */
 #openModalBtn {
   padding: 10px 20px;
   font-size: 16px;
@@ -120,126 +131,179 @@ body {
 
 /* Modal */
 .modal {
-  display: none;
+  display: none;/* Hides modal by default */
   position: fixed;
-  z-index: 1;
+  z-index: 1; /* Ensures modal is above other content */
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
+  overflow: auto; /* Adds scrollbars if needed */
   background-color: rgba(0, 0, 0, 0.4);
   padding-top: 60px;
 }
 
 .modal-content {
-  background-color: #fefefe;
-  border-radius: 1rem;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
-  padding: 20px 10px;
-  width: 80%;
-  max-width: 600px;
+  position: relative;
 }
 
+/* Login and Registration Container Styling */
+.login-container,
+.registration-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Logo styling */
+.logo {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+/* Close button styling in modals */
 .close {
-  color: red;
-  float: right;
-  font-size: 28px;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 35px;
   font-weight: bold;
-  margin-right: 10px;
+  cursor: pointer;
+  color: #000000;
 }
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: #aaaaaa;   /* Changes color on hover or focus */
   text-decoration: none;
   cursor: pointer;
 }
 
-/* Login Form */
-#loginForm .input-control {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  margin-left: 90px;
-  font-weight: bold;
+/* Signup and login Form Input control styling */
+.input-control,
+#loginForm, #registration-form .input-control {
+  width: 300px;
+  position: relative;
+  margin-bottom: 20px;
 }
 
-#login-title {
-  text-align: center;
-  color: lightslategrey;
-  margin-right: 120px;
-  margin-bottom: 30px;
+.input-wrapper {
+  position: relative; /* Positions wrapper relative to its normal position */
 }
 
+/*Styling for login form input area*/
 #loginForm .input-control input {
-  border: 2px solid #f0f0f0;
-  border-radius: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
   display: block;
-  font-size: 12px;
+  font-size: 16px;
   padding: 10px;
-  margin-right: 50px;
+  width: 100%;
+  transition: border-color 0.3s;  /* Adds transition effect on border color */
+}
+
+.input-control label {
+  position: absolute;
+  left: 10px;
+  top:0;
+  transform: translateY(-50%);  /* Centers label vertically */
+  background-color: #ffffff;
+  padding: 0 5px;
+  font-size: 12px;
+  color: #666666;
+  transition: all 0.3s;
 }
 
 #loginForm .input-control input:focus {
-  outline: 0;
-  background-color: #ddd;
+  outline: 0; /* Removes default outline */
+  background-color: #f9f9f9;
+  border-color: #000000;
 }
 
 #loginForm .input-control.success input {
-  border-color: #09c372;
+  border: 1px solid;
+  border-color: #09c372;  /* Sets border color for successful input*/
 }
 
-#loginForm .input-control.error input {
-  border-color: #ff3860;
+#loginForm .input-control.error input  {
+  border: 1px solid;
+  border-color: #ff3860;  /* Sets border color for error */
 }
 
 #loginForm .input-control .error {
-  color: #ff3860;
+  color: #ff3860; /* Sets text color for error messages */
   font-size: 9px;
   height: 13px;
 }
 
-#loginForm .login-btn {
-  margin: 25px 0;
-  margin-right: 50px;
+/* Password toggle button styling */
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  display: none;  /* Hides by default */
 }
+
+.input-control input:focus + .password-toggle {
+  display: block; /* Shows the toggle button on input focus */
+}
+
 
 /* Registration Form */
 #registration-form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center;  /* Centers children vertically */
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
-
 }
 
 #registration-form label {
-  width: 100%;
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-  text-align: left;
+  position: absolute;
+  left: 10px;
+  top:0;
+  transform: translateY(-50%);  /* Centers label vertically */
+  background-color: #ffffff;
+  padding: 0 5px;
+  font-size: 12px;
+  color: #666666; /* Sets text color */
+  transition: all 0.3s;
 }
 
+/*Styling for the input areas text, email, password*/
+.input-control input,
 #registration-form input[type='text'],
 #registration-form input[type='email'],
 #registration-form input[type='password'] {
-  width: 100%;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  display: block;
+  font-size: 16px;
   padding: 10px;
-  margin: 5px 0 15px 0;
-  background: #f1f1f1;
-  box-sizing: border-box;
+  width: 100%;
+  transition: border-color 0.3s;
 }
 
+/*Styling for the input areas text, email, password when in focus*/
+.input-control input:focus,
 #registration-form input[type='text']:focus,
 #registration-form input[type='email']:focus,
 #registration-form input[type='password']:focus {
-  background-color: #ddd;
-  outline: none;
+  outline: 0;
+  background-color: #f9f9f9;
+  border-color: #000000;
 }
 
 #registration-title {
@@ -250,30 +314,73 @@ body {
 }
 
 .finalize {
-  width: 90%;
+  width: 90%; /* Sets width of finalize section */
   display: flex;
-  justify-content: space-between;
 }
 
-.cancelbtn,
+/*Styling for the register button in signup*/
 .registerbtn {
-  background-color: rgb(255, 195, 127);
-  border-radius: 6px;
-  cursor: pointer;
-  padding: 8px 8px;
-  margin: 10px 0;
-  width: 48%;
+  width: 40%;
+  background-color: #F5D187;
+  padding: 4px 10px;
+  margin-left: 90px;
+  font-size: 16px;
+  border-radius: 30px;
 }
 
-.cancelbtn:hover {
-  background-color: red;
-}
+
 .registerbtn:hover {
-  background-color: darkcyan;
+  background-color: #E8A722;
+}
+
+.registerbtn:active {
+  background-color: #e6a626;
+  outline: 1px solid black;
+  outline-offset: 2px;
 }
 
 
-/* Responsive adjustments to be at the very bottom of this styling file*/
+/*payment options styling starts here NEW*/
+
+#login-credit {
+  width: 60%;
+}
+
+
+.basket-btn {
+  padding: 10px 20px;
+  margin-left: 20px;
+  font-size: 16px;
+  color: #ffffff;
+  border-radius: 10px;
+  background-color: #3f93ec;
+  border: none;
+  cursor: pointer;
+}
+
+#basketItems {
+  list-style-type: none;
+  padding: 0;
+}
+
+#basketItems li {
+  margin-bottom: 10px;
+}
+
+.checkout-btn, .pay-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  background-color: #3f93ec;
+  border: none;
+  cursor: pointer;
+}
+
+/*payment options styling ends here*/
+
+
+
+/* Responsive adjustments to be at the very bottom of this styling file, DO NOT DELETE*/
 @media screen and (max-width: 600px) {
   .modal-content {
     width: 95%;
@@ -285,12 +392,11 @@ body {
   }
 
   .finalize {
-    flex-direction: column;
+    flex-direction: column; /* Stacks items vertically on small screens*/
   }
 
-  .cancelbtn,
-  .registerbtn {
-    width: 100%;
+    .registerbtn {
+    width: 100%;  /* Takes full width on small screens */
     margin: 5px 0;
   }
 }
