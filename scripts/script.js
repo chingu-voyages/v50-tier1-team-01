@@ -374,3 +374,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+function formatDate(date) {
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  return date.toLocaleDateString(undefined, options);
+}
+
+// Function to format the current time
+function formatTime(date) {
+  const options = { hour: 'numeric', minute: 'numeric', second: 'numeric' };
+  return date.toLocaleTimeString(undefined, options);
+}
+
+// Function to display the current date and time
+function displayCurrentDateTime() {
+  const currentDateTimeElement = document.getElementById('currentDateTime');
+  const currentDate = new Date();
+  const formattedDate = formatDate(currentDate);
+  const formattedTime = formatTime(currentDate);
+  currentDateTimeElement.textContent += `${formattedDate} ${formattedTime}`;
+}
+
+// Call the function to display the date and time when the page loads
+window.onload = displayCurrentDateTime;
