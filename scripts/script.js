@@ -148,6 +148,7 @@ function updateBasketDisplay() {
   const basketItems = document.getElementById('basketItems');
   const basketTotal = document.getElementById('basketTotal');
   const checkoutTotal = document.getElementById('checkoutTotal');
+  const finalTotal = document.getElementById('finalTotal');
 
   basketCount.textContent = basket.length;
   basketItems.innerHTML = '';
@@ -166,6 +167,7 @@ function updateBasketDisplay() {
 
   basketTotal.textContent = total.toFixed(2);
   checkoutTotal.textContent = total.toFixed(2);
+  finalTotal.textContent = total.toFixed(2);
 }
 
 function updateAvailableCredit() {

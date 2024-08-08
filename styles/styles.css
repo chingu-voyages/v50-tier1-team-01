@@ -136,7 +136,6 @@ body {
   background-color: #fefefe;
   border-radius: 1rem;
   padding: 20px 25px;
-  height: 100%;
   width: 532px;
   margin: 0 auto;
 }
@@ -337,7 +336,7 @@ body {
 }
 
 #basketItems li {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .checkout-btn,
@@ -421,12 +420,13 @@ body {
   font-size: 24px;
 }
 
+.basket-checkout {
+  margin-top: 10px;
+}
+
 .basket-total {
   display: flex;
   justify-content: space-between;
-}
-
-.basket-checkout {
 }
 
 .basket-total {
