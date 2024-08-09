@@ -327,8 +327,21 @@ body {
   padding: 50px;
 }
 
+.base-customization,
+.cheese-customization,
+.toppings-customizations {
+  padding: 30px;
+}
+
 .base-customization > input {
   border: 1px solid #000;
+  padding: 50px;
+}
+
+.base-customization label,
+.cheese-customization label, 
+.toppings-customizations label {
+  padding: 50px 50px 50px 0px;
 }
 
 /* Responsive adjustments to be at the very bottom of this styling file*/
