@@ -1,6 +1,8 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
+  display: flex;
+  flex-direction: column;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
@@ -9,7 +11,7 @@ body {
   height: 76.15px;
 }
 #logo-name{
-  font-family: SF Pro Text;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 16.43px;
   font-weight: 400;
   line-height: 42.37px;
@@ -69,68 +71,98 @@ body {
   margin: 18px 28.7px 0px 28px;
   
 }
-.menu-list {
+#menu-list{
+  margin: 33px 53px 105.76px 53px;
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   justify-content: center;
-  gap: 20px;
+  max-width: 1,174px;
+  max-height: 453.24px;
+  gap: 19px 60px;
+  
 }
 
-.menu-image-div {
-  width: 200px;
-}
-
-.menu-item-image {
-  max-width: 200px;
-  height: auto;
-  border-radius: 20px;
-}
-
-.primary-menu-item-details-div {
-  padding: 20px;
-  flex: 2;
-}
-
-.menu-list-item {
-  border: 1px solid #fff;
-  width: 700px;
-  height: auto;
-  border-radius: 1rem;
-  box-shadow: 0px 4px 21px -12px rgba(0, 0, 0, 0.79);
-}
-
-.menu-item {
+.menu-item{
+  width: 540.78px;
+  height: 138.41px;
+  padding: 8px;
+  border-radius: 8px;
+  opacity: 0px;
+  border: 1px solid #D2D8CB;
   display: flex;
-  flex-wrap: wrap;
 }
 
-.menu-item-details {
+.menu-image-div{
+  width: 163.22px;
+  height: 122.41px;
+  border: 0px;
+}
+.menu-item-image{
+  height: 100%;
+  width: 100%;
+  border-radius: 8.37px;
+  border: 0px;
+}
+
+.primary-menu-item-details-div{
+  margin: 0px;
+}
+
+.menu-item-name{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 14.43px;
+  letter-spacing: 0.18033833801746368px;
+  text-align: left;
+}
+
+.menu-item-description{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 15.11px;
+  letter-spacing: -0.18135163187980652px;
+  text-align: left;
+}
+
+.menu-item-rating {
+  color: #000000;
+
+}
+
+
+.menu-item-detailsof{
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
+  
 }
 
-.menu-item-name {
-  font-weight: bold;
-  margin-bottom: 5px;
+.menu-item-price{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16.53px;
+  font-weight: 860;
+  line-height: 22.04px;
+  letter-spacing: -0.25345128774642944px;
+  text-align: left;
+  color: #D42828;
 }
 
-.menu-item-description {
-  font-size: 0.9em;
-  color: #666;
-  margin-bottom: 10px;
-}
-
-.menu-item-price {
-  color: crimson;
-}
-
-.add-to-basket-button {
-  color: aliceblue;
-  background-color: #007aff;
-  border-radius: 20px;
-  width: 75px;
-  height: 35px;
+.add-to-basket-button{
+  width: 95px;
+  height: 28px;
+  padding: 4px 33.5px;
+  gap: 1px;
+  border-radius: 40px;
+  background-color: #F5D187;
+  color:#000000;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.23000000417232513px;
+  text-align: left;
+  
 }
 
 .add-to-basket-button:hover {
@@ -139,9 +171,6 @@ body {
   cursor: pointer;
 }
 
-.menu-item-rating {
-  color: gold;
-}
 
 /* Button Container */
 /* .button-container {
