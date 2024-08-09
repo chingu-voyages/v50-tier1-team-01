@@ -1,6 +1,11 @@
+
 /* General body styling */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -140,13 +145,13 @@ body {
   height: 100%;
   overflow: auto; /* Adds scrollbars if needed */
   background-color: rgba(0, 0, 0, 0.4);
-  padding-top: 60px;
+  padding-top: 160px;
 }
 
 .modal-content {
   background-color: #ffffff;
-  border-radius: 20px;
-  padding: 20px;
+  border-radius: 2rem;
+  padding: 20px 25px;
   width: 90%;
   max-width: 400px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -171,13 +176,12 @@ body {
 
 /* Close button styling in modals */
 .close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 35px;
+  color: #000;
+  float: right;
+  font-size: 28px;
   font-weight: bold;
   cursor: pointer;
-  color: #000000;
+  margin-right: 10px;
 }
 
 .close:hover,
@@ -399,22 +403,27 @@ body {
 #basketItems {
   list-style-type: none;
   padding: 0;
+  overflow-y: auto;
+  height: 300px;
+  margin-top: 30px;
+  font-size: 18px;
 }
 
 #basketItems li {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
-.checkout-btn, .pay-btn {
+.checkout-btn,
+.pay-btn {
   padding: 10px 20px;
   font-size: 16px;
-  border-radius: 10px;
-  background-color: #3f93ec;
+  border-radius: 52px;
+  background-color: #f5d187;
   border: none;
   cursor: pointer;
+  width: 120px;
 }
 /*payment options styling ends here*/
-
 
 .filter-dropdown {
   position: relative;
@@ -445,47 +454,121 @@ body {
   display: block;
 }
 
-/*payment options styling starts here NEW*/
 
-#login-credit {
-  width: 60%;
+/* Basket styles */
+
+.basket-heading {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-size: 31px;
 }
 
-
-.basket-btn {
-  padding: 10px 20px;
-  margin-left: 20px;
-  font-size: 16px;
-  color: #ffffff;
-  border-radius: 10px;
-  background-color: #3f93ec;
-  border: none;
-  cursor: pointer;
+.basket-title {
+  text-transform: uppercase;
+  letter-spacing: 7px;
 }
 
-#basketItems {
-  list-style-type: none;
-  padding: 0;
+.basket-summary {
+  display: flex;
+  justify-content: space-between;
 }
 
-#basketItems li {
+.basket-prelim {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+#basketTotal {
+  font-weight: bold;
+}
+
+.thanks-box {
+  background-color: #fcf6ea;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px;
+  border-radius: 5px;
+}
+
+.thanks-box p {
+  font-size: 24px;
+}
+
+.basket-checkout {
+  margin-top: 10px;
+}
+
+.basket-total {
+  display: flex;
+  justify-content: space-between;
+}
+
+.basket-total {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+/* Checkout styles */
+
+.checkout-price,
+.checkout-total,
+.checkout-credit {
+  color: #d42828;
+}
+
+.checkout-heading {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-size: 31px;
+}
+
+.checkout-logo {
+  display: flex;
+  justify-content: center;
+}
+
+.checkout-text {
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.remove-from-basket-button {
+  background-color: #fff;
+  color: #d42828;
+  display: block;
+  text-align: left;
+}
+
+.total-container {
+  margin-top: 60px;
   margin-bottom: 10px;
 }
 
-.checkout-btn, .pay-btn {
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 10px;
-  background-color: #3f93ec;
-  border: none;
-  cursor: pointer;
+.pay-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 30px;
 }
 
-/*payment options styling ends here*/
+/* Styling currency */
 
-
+.currency-styles {
+  display: flex;
+  font-weight: bold;
+  color: #d42828;
+}
 
 /* Responsive adjustments to be at the very bottom of this styling file, DO NOT DELETE*/
+
 @media screen and (max-width: 600px) {
   .modal-content {
     width: 95%;
