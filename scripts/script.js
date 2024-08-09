@@ -1,9 +1,10 @@
+// Get references to DOM elements
 const menu_list = document.querySelector('#menu-list');
 const test = document.querySelector('.test');
 
 // Function to sort and display pizzas based on the selected filter
 const filterPizzas = (order) => {
-  let pizzas = Array.from(menu_list.children);
+  let pizzas = Array.from(menu_list.children);  // Convert menu items to an array
   pizzas.sort((a, b) => {
     let priceA = parseFloat(
       a.querySelector('.menu-item-price').innerText.replace('$', '')
@@ -13,15 +14,16 @@ const filterPizzas = (order) => {
     );
     return order === 'low' ? priceA - priceB : priceB - priceA;
   });
+
   menu_list.innerHTML = '';
   pizzas.forEach((pizza) => menu_list.appendChild(pizza));
 };
 
-// Filter button event listener
+// Add event listeners for filter dropdown items
 const dropdownItems = document.querySelectorAll('.dropdown-item');
 dropdownItems.forEach((item) => {
   item.addEventListener('click', () => {
-    const priceOrder = item.getAttribute('data-price');
+    const priceOrder = item.getAttribute('data-price'); // Get the filter order from data attribute
     filterPizzas(priceOrder);
   });
 });
@@ -176,6 +178,8 @@ function updateAvailableCredit() {
 }
 //basket and credit update functionality ends here
 
+
+// Initialize modals and event listeners
 document.addEventListener('DOMContentLoaded', () => {
   const loginModal = document.getElementById('loginModal'); //main login modal
   const signupModal = document.getElementById('signupModal'); //signup form modal
@@ -280,7 +284,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
   });
 
-  // Form submit
+    // Form submit event listener for login form
   loginForm.onsubmit = function (event) {
     event.preventDefault();
     if (validateUsernameInput() && validatePasswordInput()) {
@@ -300,15 +304,17 @@ document.addEventListener('DOMContentLoaded', () => {
     validatePasswordInput();
   };
 
+  // Function to display an error message and apply error styles
   const setError = (element, message) => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error');
+    const inputControl = element.parentElement; // Get the parent element of the input
+    const errorDisplay = inputControl.querySelector('.error');  // Find the error display element within the parent
 
     errorDisplay.innerText = message;
-    inputControl.classList.add('error');
-    inputControl.classList.remove('success');
+    inputControl.classList.add('error');  // Add error styling class
+    inputControl.classList.remove('success'); // Remove success styling class
   };
 
+  // Function to display a success message and apply success styles
   const setSuccess = (element, message) => {
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector('.error');
@@ -318,40 +324,45 @@ document.addEventListener('DOMContentLoaded', () => {
     inputControl.classList.remove('error');
   };
 
+  // Function to validate the username input
   const validateUsernameInput = () => {
-    const usernameValue = username.value.trim();
-    const validUsername = 'admin';
-    if (usernameValue === '') {
+    const usernameValue = username.value.trim();  // Get and trim the username value
+    const validUsername = 'admin';  // Force define the valid username
+    if (usernameValue === '') {  // Check if the username is empty
       setError(username, 'Username is required');
       return false;
     } else if (usernameValue !== validUsername) {
       setError(username, 'Please enter valid username');
       return false;
     } else {
-      setSuccess(username, '');
+      setSuccess(username, ''); // Clear any existing error messages and show success
       return true;
     }
   };
 
+  // Function to validate the password input
   const validatePasswordInput = () => {
     const passwordValue = password.value.trim();
     const validPassword = 'password1';
     if (passwordValue === '') {
-      setError(password, 'Password is required');
+      setError(password, 'Password is required'); // Show error message
       return false;
     } else if (passwordValue !== validPassword) {
       setError(password, 'Please enter valid password');
-      return false;
+      return false; // Validation failed
     } else {
       setSuccess(password, '');
       return true;
     }
   };
 
+  // Attach validation functions to the blur event of the username and password fields
   username.onblur = validateUsernameInput;
   password.onblur = validatePasswordInput;
 
   getMenuData();
+
+
   //search bar and filter button
 
   const searchBar = document.getElementById('searchBar');

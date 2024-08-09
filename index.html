@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./scripts/script.js" defer></script>
+    <link rel="icon" href="pizza-hub-logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/styles.css" />
-    <title>Pizza App</title>
+    <title>Pizza Hub</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
@@ -16,7 +17,6 @@
       <div class="button-container">
         <button id="openSignupModalBtn" class="signup-btn">Sign Up</button>
         <button id="openLoginModalBtn" class="login-btn">Login</button>
-
         <!--Orders basket icon view NEW-->
         <button id="basketBtn" class="basket-btn">
           Basket (<span id="basketCount">0</span>)
@@ -44,95 +44,74 @@
     </div>
     <main>
       <!-- Login Modal -->
+
       <div id="loginModal" class="modal">
         <div class="modal-content">
           <span class="close">&times;</span>
-          <h2 id="login-title">Login</h2>
-          <form id="loginForm" action="/">
-            <div class="input-control">
-              <label for="login-username">Username</label>
-              <input type="text" id="login-username" name="username" />
-              <div class="error"></div>
-            </div>
-            <div class="input-control">
-              <label for="login-password">Password</label>
-              <input type="password" id="login-password" name="password" />
-              <div class="error"></div>
-
-              <!--Payment options credit control NEW-->
+          <div class="login-container">
+            <img src="pizza-hub-logo.png" alt="Pizza Hub Logo" class="logo">
+            <form id="loginForm" action="/">
               <div class="input-control">
-                <label for="login-credit">Add Credit Amount ($)</label>
-                <input
-                  type="number"
-                  id="login-credit"
-                  name="credit"
-                  min="0"
-                  step="0.01"
-                  required />
+                <label for="login-username">Username</label>
+                <input type="text" id="login-username" name="username" placeholder="Type Username" />
                 <div class="error"></div>
               </div>
-              <!--Payment options credit control ends here-->
+              <div class="input-control">
+                <label for="login-password">Password</label>
+                  <input type="password" id="login-password" name="password" placeholder="Type Password" />
 
-              <button type="submit" class="login-btn">Login</button>
-            </div>
-          </form>
+                <div class="error"></div>
+              </div>
+              <div class="input-control">
+                <label for="login-credit">Credit Amount ($)</label>
+                <input type="number" id="login-credit" name="credit" min="0" step="0.01" placeholder="Add Amount" required />
+                <div class="error"></div>
+              </div>
+              <!-- Submit button for the login form -->
+              <button type="submit" class="login-btn">Log In</button>
+            </form>
+          </div>
         </div>
       </div>
+
       <!-- Signup Modal -->
       <div id="signupModal" class="modal">
         <div class="modal-content">
+          <!-- Close button for the signup modal -->
           <span class="close">&times;</span>
-          <section id="registration">
-            <h2 id="registration-title">User Registration</h2>
+          <div class="registration-container">
+            <img src="pizza-hub-logo.png" alt="Pizza Hub Logo" class="logo">
+            <!-- Signup form -->
             <form id="registration-form">
-              <label for="signup-username">Username: </label>
-              <input
-                type="text"
-                placeholder="Enter Username"
-                id="signup-username"
-                name="username"
-                required />
-
-              <label for="email">Email: </label>
-              <input
-                type="email"
-                placeholder="Enter Email"
-                id="email"
-                name="email"
-                required />
-
-              <label for="signup-password">Password: </label>
-              <input
-                type="password"
-                placeholder="Enter Password"
-                id="signup-password"
-                name="password"
-                pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9])\S{8,}$"
-                title="Password must contain at least one number, one alphabet, one symbol, and be at least 8 characters long"
-                required />
-
-              <label for="repassword">Re-type Password: </label>
-              <input
-                type="password"
-                placeholder="Repeat Password"
-                id="repassword"
-                name="repassword"
-                required />
-
-              <label for="mobile">Contact:</label>
-              <input
-                type="text"
-                placeholder="Mobile Number"
-                id="mobile"
-                name="mobile"
-                maxlength="10"
-                required />
+              <div class="input-control">
+                <label for="signup-username">Username: </label>
+                <input type="text" placeholder="Enter Username" id="signup-username" name="username" required />
+                <div class="error"></div>
+              </div>
+              <div class="input-control">
+                <label for="email">Email: </label>
+                <input type="email" placeholder="Enter Email" id="email" name="email" required />
+                <div class="error"></div>
+              </div>
+              <div class="input-control">
+                <label for="signup-password">Password: </label>
+                <input type="password" placeholder="Enter Password" id="signup-password" name="password"
+                  pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9])\S{8,}$"
+                  title="Password must contain at least one number, one alphabet, one symbol, and be at least 8 characters long"
+                  required />
+                  <div class="error"></div>
+                </div>
+              <div class="input-control">
+                <label for="mobile">Contact:</label>
+                <input type="text" placeholder="Mobile Number" id="mobile" name="mobile" maxlength="10" required />
+                <div class="error"></div>
+              </div>
+              <!-- Submit button for the signup form -->
               <div class="finalize">
-                <button type="button" class="cancelbtn">Cancel</button>
                 <button type="submit" class="registerbtn">Register</button>
               </div>
             </form>
-          </section>
+          </div>
         </div>
       </div>
 
@@ -192,6 +171,7 @@
           </div>
         </div>
       </div>
+
       <div class="menu-div" id="menu-div">
         <ul class="menu-list" id="menu-list"></ul>
       </div>
