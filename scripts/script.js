@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
         addToBasket(pizzaData);
       }
       // Remove from Basket
-      else if (event.target.classList.contains('remove-from-basket-button')) {
+     else if (event.target.classList.contains('remove-from-basket-button')) {
         const pizzaData = JSON.parse(event.target.getAttribute('data-pizza'));
         removeFromBasket(pizzaData);
       }
