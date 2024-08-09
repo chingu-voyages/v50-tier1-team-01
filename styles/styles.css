@@ -248,20 +248,6 @@ body {
   height: 13px;
 }
 
-/* Password toggle button styling */
-.password-toggle {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  display: none;  /* Hides by default */
-}
-
-.input-control input:focus + .password-toggle {
-  display: block; /* Shows the toggle button on input focus */
-}
-
 
 /* Registration Form */
 #registration-form {
