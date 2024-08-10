@@ -101,7 +101,7 @@ async function getMenuData() {
               <div class="menu-item-description">${pizza.description}</div>
               <div class="menu-item-price">$${pizza.price}</div>
             </div>
-            <div class="menu-item-details">
+            <div class="menu-item-detailsof">
               <div class="menu-item-rating">${displayRating(pizza.rate)}</div>
               <button class="add-to-basket-button" data-pizza='${JSON.stringify(
                 pizza
