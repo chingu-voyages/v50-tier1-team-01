@@ -110,6 +110,13 @@ async function getMenuData() {
           </div>
         </div>
       `;
+      // Get the image element
+      const imgElement = listItem.querySelector('.menu-item-image');
+
+      // Add an error event listener to replace the image if it fails to load
+      imgElement.onerror = function() {
+        imgElement.src = 'images/fallback-pizza.png';  // Replace with your fallback image path
+      };
       menu_list.appendChild(listItem);
     }
   } catch (error) {
