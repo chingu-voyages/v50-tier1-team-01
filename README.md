@@ -1,43 +1,24 @@
-# voyage-tasks
+# Pizza Hub
 
-Your project's `readme` is as important to success as your code. For
-this reason you should put as much care into its creation and maintenance
-as you would any other component of the application.
+Welcome to Pizza Hub! This repository contains the code for our application, which is an online pizza ordering platform. The app contains a number of features including user authentication, search and filter, order management, responsive design and interactivity. You can view the app at [Pizza Hub](https://chingu-voyages.github.io/v50-tier1-team-01/)
 
-If you are unsure of what should go into the `readme` let this article,
-written by an experienced Chingu, be your starting point -
-[Keys to a well written README](https://tinyurl.com/yk3wubft).
+## Table of Contents
 
-And before we go there's "one more thing"! Once you decide what to include
-in your `readme` feel free to replace the text we've provided here.
+## Project Description
 
-> Own it & Make it your Own!
+## Features
 
-## Team Documents
+## Installation
 
-You may find these helpful as you work together to organize your project.
-
-- [Team Project Ideas](./docs/team_project_ideas.md)
-- [Team Decision Log](./docs/team_decision_log.md)
-
-Meeting Agenda templates (located in the `/docs` directory in this repo):
-
-- Meeting - Voyage Kickoff --> ./docs/meeting-voyage_kickoff.docx
-- Meeting - App Vision & Feature Planning --> ./docs/meeting-vision_and_feature_planning.docx
-- Meeting - Sprint Retrospective, Review, and Planning --> ./docs/meeting-sprint_retrospective_review_and_planning.docx
-- Meeting - Sprint Open Topic Session --> ./docs/meeting-sprint_open_topic_session.docx
+## Technologies and Libraries
 
 ## Our Team
-
-Everyone on your team should add their name along with a link to their GitHub
-& optionally their LinkedIn profiles below. Do this in Sprint #1 to validate
-your repo access and to practice PR'ing with your team _before_ you start
-coding!
 
 - Adeola Adebayo (Product Owner) https://github.com/adeolaadebayo
 - Anita Boakye-Yiadom (Scrum Master): [GitHub](https://github.com/AnitaBoakye) / [LinkedIn](https://linkedin.com/in/anitaboakyeyiadom/)
 - Lawrence Narh-Lawson (Front End Developer): [GitHub](https://github.com/lawlawson) / [LinkedIn](https://www.linkedin.com/in/lawlawson/)
-- Armughan Fahmi (Developer): [GitHub](https://github.com/iarmoghan) 
+- Armughan Fahmi (Developer): [GitHub](https://github.com/iarmoghan)
 - Mandla, cash_53 (Developer): [GitHub](https://github.com/Mandla-tech) / [LinkedIn](https://www.linkedin.com/in/mandla-m/)
 - Blanka (UX/UI Designer): [GitHub](https://github.com/shineaubergine) / [LinkedIn](https://www.linkedin.com/in/blanka-calija/)
 - Isaac Abodunrin (Developer): [GitHub](https://github.com/bytesandroses)
+- Lejla (UI/UX Designer):
