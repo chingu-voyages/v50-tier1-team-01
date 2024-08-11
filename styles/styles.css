@@ -700,7 +700,7 @@ body {
 /* Responsive adjustments to be at the very bottom of this styling file, DO NOT DELETE*/
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1325px) {
   .modal-content {
     width: 95%;
     padding: 15px;
@@ -721,6 +721,7 @@ body {
   #header-section{
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   .search-bar{
     width: 150px;
