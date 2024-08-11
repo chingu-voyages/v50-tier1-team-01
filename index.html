@@ -16,10 +16,13 @@
     <header id="header-section">
       <img src="images/logo.png" alt="logo" id="logo">
       <p id="logo-name">PIZZA HUB</p>
-      <button id="searchButton" class="search-btn">
-        <i class="fa fa-search" aria-hidden="true"></i>
-      </button>
-      <input type="text" id="searchBar" class="search-bar" placeholder="Search Pizza Hub" />
+      <div>
+        <button id="searchButton" class="search-btn">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </button>
+        <input type="text" id="searchBar" class="search-bar" placeholder="Search Pizza Hub" />
+      </div>
+      
       <div class="button-container">
         <button id="openLoginModalBtn" class="login-btn">Login</button>
         <button id="openSignupModalBtn" class="signup-btn">Sign Up</button>       
@@ -65,7 +68,12 @@
                 <div class="error"></div>
               </div>
               <!-- Submit button for the login form -->
-              <button type="submit" class="login-btn">Log In</button>
+              <div class="button-container">
+
+                <button type="submit" class="login-btn">LogIn</button>
+
+              </div>
+              
             </form>
           </div>
         </div>
