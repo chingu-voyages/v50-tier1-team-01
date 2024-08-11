@@ -131,6 +131,18 @@ function displayRating(rating_score) {
   return rating_star.join('');
 }
 
+getMenuData().then(() => {
+  const addToBasketButtons = document.querySelectorAll(".add-to-basket-button");
+  const menuCustomization = document.querySelector("#menu-customization") ;
+  addToBasketButtons.forEach(button => {
+      button.addEventListener("click", () => {
+          console.log("Hello");
+          menuCustomization.style.display = 'block';
+
+      });
+  });
+});
+
 //Adding items to basket and credit update on order starts here NEW.
 function addToBasket(pizza) {
   basket.push(pizza);
