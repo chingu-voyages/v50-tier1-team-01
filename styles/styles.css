@@ -312,6 +312,25 @@ body {
   margin-left: 5px;
 }
 
+.menu-customization {
+  max-width: 1280px;
+  height: 832px;
+  background-color: #fff;
+  border-radius: 25px;
+  margin: auto;
+}
+
+#menu-customization-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 50px;
+}
+
+.base-customization > input {
+  border: 1px solid #000;
+}
+
 /* Responsive adjustments to be at the very bottom of this styling file*/
 @media screen and (max-width: 600px) {
   .modal-content {

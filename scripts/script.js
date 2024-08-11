@@ -101,7 +101,18 @@ function displayRating(rating_score) {
   return rating_star.join('');
 }
 
-getMenuData();
+getMenuData().then(() => {
+  const addToBasketButtons = document.querySelectorAll(".add-to-basket-button");
+  const menuCustomization = document.querySelector("#menu-customization") ;
+  addToBasketButtons.forEach(button => {
+      button.addEventListener("click", () => {
+          console.log("Hello");
+          menuCustomization.style.display = 'block';
+
+      });
+  });
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   const loginModal = document.getElementById('loginModal');
   const signupModal = document.getElementById('signupModal');
