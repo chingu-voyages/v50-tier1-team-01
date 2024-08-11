@@ -44,6 +44,14 @@ Pizza Hub is an interactive online pizza ordering platform that enables users to
 
 - FontAwesome icons enhances the visual appeal and usability of the application as well as custom design provided by UI/UX developers.
 
+**7. Login details:**
+
+- To login for the full experience of being able to add credit to the account and purchase items, the details are:
+
+- **Username:** admin
+- **Password:** password1
+
+
 ### Installation
 
 Follow these steps to run the Pizza Hub application locally:
