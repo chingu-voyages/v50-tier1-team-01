@@ -232,7 +232,7 @@ body {
 
 
 /* Login button styling */
-#loginForm  .login-btn {
+#loginForm .login-btn {
   width: 40%;
   background-color: #F5D187;  /* Sets the idle mode background color */
   border: 1px solid black;
@@ -244,13 +244,7 @@ body {
 
 /*Styling for the button on hover*/
 #loginForm .login-btn:hover {
-  width: 40%;
   background-color: #E8A722;
-  border: 1px solid black;  /* Keeps border on hover */
-  padding: 4px 10px;
-  font-size: 16px;
-  border-radius: 30px;
-  cursor: pointer;
   }
 
 
@@ -494,6 +488,8 @@ body {
   width: 60%;
 }
 
+
+
 .basket-btn {
   background-color: white;
 }
@@ -696,7 +692,7 @@ body {
 /* Styling currency */
 
 .currency-styles {
-  display: flex;me
+  display: flex;
   font-weight: bold;
   color: #d42828;
 }
@@ -704,7 +700,7 @@ body {
 /* Responsive adjustments to be at the very bottom of this styling file, DO NOT DELETE*/
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1325px) {
   .modal-content {
     width: 95%;
     padding: 15px;
@@ -722,4 +718,44 @@ body {
     width: 100%;  /* Takes full width on small screens */
     margin: 5px 0;
   }
+  #header-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .search-bar{
+    width: 150px;
+  }
+  #menu-list{
+    gap: 24.78px 9px;
+  }
+  .menu-item{
+    width: 200px;
+    height: 300px;
+    flex-direction: column;
+  }
+  .menu-image-div{
+    width: 175.93px;
+    height: 210.14px;
+
+  }
+  .menu-item-name{
+    font-size: 15.64px;
+    font-weight: 700;
+    line-height: 18.66px;
+    text-align: left;
+    width: 175.93px;
+    height: 36.16px;
+    margin-bottom: 15px;
+  }
+
+  .menu-item-rating {
+    width: 60.6px;
+    height: 11.09px;
+  }
+  .menu-item-description{
+    display: none;
+  }
+
+
 }
