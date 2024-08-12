@@ -29,6 +29,37 @@
     </div>
   </header>
   <div id="filter-section">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./scripts/script.js" defer></script>
+    <link rel="icon" href="pizza-hub-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Pizza Hub</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  </head>
+  <body>
+    <header id="header-section">
+      <img src="images/logo.png" alt="logo" id="logo">
+      <p id="logo-name">PIZZA HUB</p>
+      <div>
+        <button id="searchButton" class="search-btn">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </button>
+        <input type="text" id="searchBar" class="search-bar" placeholder="Search Pizza Hub" />
+      </div>
+      
+      <div class="button-container">
+        <button id="openLoginModalBtn" class="login-btn">Login</button>
+        <button id="openSignupModalBtn" class="signup-btn">Sign Up</button>       
+        <!--Orders basket icon view NEW-->
+        <button id="basketBtn" class="basket-btn"><i class="fa-solid fa-cart-shopping"></i>(<span id="basketCount">0</span>)</button>
+      </div>
+    </header>
+    <div id="filter-section">
 
     <div class="filter-dropdown">
       <button id="filterButton" class="filter-btn">Sort by <i class="fa-solid fa-caret-down"></i></button>
@@ -58,20 +89,24 @@
               <label for="login-password">Password</label>
               <input type="password" id="login-password" name="password" placeholder="Type Password" />
 
-              <div class="error"></div>
-            </div>
-            <div class="input-control">
-              <label for="login-credit">Credit Amount ($)</label>
-              <input type="number" id="login-credit" name="credit" min="0" step="0.01" placeholder="Add Amount"
-                required />
-              <div class="error"></div>
-            </div>
-            <!-- Submit button for the login form -->
-            <button type="submit" class="login-btn">Log In</button>
-          </form>
+                <div class="error"></div>
+              </div>
+              <div class="input-control">
+                <label for="login-credit">Credit Amount ($)</label>
+                <input type="number" id="login-credit" name="credit" min="0" step="0.01" placeholder="Add Amount" required />
+                <div class="error"></div>
+              </div>
+              <!-- Submit button for the login form -->
+              <div class="button-container">
+
+                <button type="submit" class="login-btn">LogIn</button>
+
+              </div>
+              
+            </form>
+          </div>
         </div>
       </div>
-    </div>
 
     <!-- Signup Modal -->
     <div id="signupModal" class="modal">

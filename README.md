@@ -2,7 +2,7 @@
 
 Welcome to Pizza Hub! This repository contains the code for our application, which is an online pizza ordering platform. The app contains a number of features including user authentication, search and filter, order management, responsive design and interactivity. You can view the app at [Pizza Hub](https://chingu-voyages.github.io/v50-tier1-team-01/)
 
-![](/homepage.png)
+![screenshot](/v50-tier1-team-01/homepage.png)
 
 ## Table of Contents
 
@@ -43,6 +43,14 @@ Pizza Hub is an interactive online pizza ordering platform that enables users to
 - Modals for signup, login, and checkout provides a dynamic user experience.
 
 - FontAwesome icons enhances the visual appeal and usability of the application as well as custom design provided by UI/UX developers.
+
+**7. Login details:**
+
+- To login for the full experience of being able to add credit to the account and purchase items, the details are:
+
+- **Username:** admin
+- **Password:** password1
+
 
 ### Installation
 
