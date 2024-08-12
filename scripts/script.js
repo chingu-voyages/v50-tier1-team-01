@@ -414,7 +414,7 @@ function displayCurrentDateTime() {
 }
 
 function showCustomizationModal(pizzaData) {
-  const menuCustomization = document.querySelector(".menu-customization");
+  const menuCustomization = document.querySelector("#menu-customization");
   menuCustomization.style.display = 'block';
   
   menuCustomization.dataset.selectedPizza = JSON.stringify(pizzaData);
@@ -435,26 +435,28 @@ function showCustomizationModal(pizzaData) {
 
   document.querySelector("#toppings-customizations").innerHTML = `
     <h3>|&nbsp&nbsp&nbsp&nbsp&nbspTOPPINGS&nbsp&nbsp&nbsp&nbsp&nbsp|</h3>
-    <input type="checkbox" value="Pepperoni"> Pepperoni
-    <input type="checkbox" value="Pinapples"> Pinapples
-    <input type="checkbox" value="Jalapenos"> Jalapenos
-    <input type="checkbox" value="Garlic"> Garlic
-    <input type="checkbox" value="Onion"> Onion
-    <input type="checkbox" value="Mushrooms"> Mushrooms
-    <input type="checkbox" value="Chicken"> Chicken
-    <input type="checkbox" value="Green-Pepper"> Green Pepper
-    <input type="checkbox" value="Olives"> Olives
-    <input type="checkbox" value="Feta"> Feta
+    <input class="toppings" type="checkbox" value="Pepperoni"> Pepperoni
+    <input class="toppings" type="checkbox" value="Pinapples"> Pinapples
+    <input class="toppings" type="checkbox" value="Jalapenos"> Jalapenos
+    <input class="toppings" type="checkbox" value="Garlic"> Garlic
+    <input class="toppings" type="checkbox" value="Onion"> Onion
+    <input class="toppings" type="checkbox" value="Mushrooms"> Mushrooms
+    <input class="toppings" type="checkbox" value="Chicken"> Chicken
+    <input class="toppings" type="checkbox" value="Green-Pepper"> Green Pepper
+    <input class="toppings" type="checkbox" value="Olives"> Olives
+    <input class="toppings" type="checkbox" value="Feta"> Feta
   `;
   
-  const addToBasketBtn = menuCustomization.querySelector("div:last-child");
+  const addToBasketBtn = menuCustomization.querySelector("#addCustomizationBtn");
   addToBasketBtn.onclick = function() {
     const selectedPizza = JSON.parse(menuCustomization.dataset.selectedPizza);
     const selectedBase = document.querySelector('input[name="base"]:checked').value;
     const selectedCheese = document.querySelector('input[name="cheese"]:checked').value;
+//    const selectedToppings = document.querySelector('input[class="toppings"]:checked').value;
     
     selectedPizza.customBase = selectedBase;
     selectedPizza.customCheese = selectedCheese;
+//    selectedPizza.customToppings = selectedToppings;
     
     addToBasket(selectedPizza);
     
