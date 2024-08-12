@@ -16,6 +16,12 @@ body {
   height: 95vh;
 }
 
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 #logo {
   width: 84px;
   height: 76.15px;
@@ -31,6 +37,8 @@ body {
   padding-left: 12.41px;
   padding-left: 0px;
 }
+
+
 
 #header-section {
   display: flex;
