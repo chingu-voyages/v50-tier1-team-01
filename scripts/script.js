@@ -350,7 +350,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Function to validate the password input
   const validatePasswordInput = () => {
     const passwordValue = password.value.trim();
-    const validPassword = 'password1';
+    const validPassword = 'p@ssword1';
     if (passwordValue === '') {
       setError(password, 'Password is required'); // Show error message
       return false;

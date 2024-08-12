@@ -49,8 +49,7 @@ Pizza Hub is an interactive online pizza ordering platform that enables users to
 - To login for the full experience of being able to add credit to the account and purchase items, the details are:
 
 - **Username:** admin
-- **Password:** password1
-
+- **Password:** p@ssword1
 
 ### Installation
 
@@ -90,11 +89,11 @@ Pizza Hub is a frontend web application built using HTML, CSS and JavaScript. Th
 
 ### Our Team
 
-- Adeola Adebayo (Product Owner) https://github.com/adeolaadebayo
+- Adeola Adebayo (Product Owner) [GitHub](https://github.com/adeolaadebayo)
 - Anita Boakye-Yiadom (Scrum Master): [GitHub](https://github.com/AnitaBoakye) / [LinkedIn](https://linkedin.com/in/anitaboakyeyiadom/)
 - Lawrence Narh-Lawson (Front End Developer): [GitHub](https://github.com/lawlawson) / [LinkedIn](https://www.linkedin.com/in/lawlawson/)
 - Armughan Fahmi (Developer): [GitHub](https://github.com/iarmoghan)
 - Mandla, cash_53 (Developer): [GitHub](https://github.com/Mandla-tech) / [LinkedIn](https://www.linkedin.com/in/mandla-m/)
 - Blanka (UX/UI Designer): [GitHub](https://github.com/shineaubergine) / [LinkedIn](https://www.linkedin.com/in/blanka-calija/)
 - Isaac Abodunrin (Developer): [GitHub](https://github.com/bytesandroses)
-- Lejla (UI/UX Designer):
+- Lejla (UI/UX Designer): [GitHub](https://github.com/Pharmacode) / [LinkedIn](www.linkedin.com/in/lejlamujkic)
