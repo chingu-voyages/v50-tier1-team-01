@@ -202,6 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const loginForm = document.getElementById('loginForm');
   let username = document.getElementById('login-username');
   let password = document.getElementById('login-password');
+  const menuCustomization = document.querySelector("#menu-customization");
 
   //This event listener responds to the 'add' button clicks in the menu
   document.addEventListener('click', (event) => {
@@ -264,6 +265,7 @@ document.addEventListener('DOMContentLoaded', () => {
       signupModal.style.display = 'none';
       basketModal.style.display = 'none';
       checkoutModal.style.display = 'none';
+      menuCustomization.style.display = 'none';
     };
   });
 
