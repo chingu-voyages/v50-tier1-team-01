@@ -208,7 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add to Basket
     if (event.target.classList.contains('add-to-basket-button')) {
       const pizzaData = JSON.parse(event.target.getAttribute('data-pizza'));
-      addToBasket(pizzaData);
+      showCustomizationModal(pizzaData);
     }
     // Remove from Basket
     else if (event.target.classList.contains('remove-from-basket-button')) {
@@ -411,6 +411,55 @@ function displayCurrentDateTime() {
   const formattedDate = formatDate(currentDate);
   const formattedTime = formatTime(currentDate);
   currentDateTimeElement.textContent += `${formattedDate} ${formattedTime}`;
+}
+
+function showCustomizationModal(pizzaData) {
+  const menuCustomization = document.querySelector(".menu-customization");
+  menuCustomization.style.display = 'block';
+  
+  menuCustomization.dataset.selectedPizza = JSON.stringify(pizzaData);
+  
+  document.querySelector("#base-customization").innerHTML = `
+    <h3>|&nbsp&nbsp&nbsp&nbsp&nbspBASE&nbsp&nbsp&nbsp&nbsp&nbsp|</h3>
+    <input type="radio" name="base" value="Original" checked> Original
+    <input type="radio" name="base" value="Thin & Crispy"> Thin & Crispy
+    <input type="radio" name="base" value="Extra Thick"> Extra Thick
+  `;
+  
+  document.querySelector("#cheese-customization").innerHTML = `
+    <h3>|&nbsp&nbsp&nbsp&nbsp&nbspCHEESE&nbsp&nbsp&nbsp&nbsp&nbsp|</h3>
+    <input type="radio" name="cheese" value="Normal" checked> Normal Mozzarella
+    <input type="radio" name="cheese" value="Double"> Double Mozzarella
+    <input type="radio" name="cheese" value="Triple"> Triple Mozzarella
+  `;
+
+  document.querySelector("#toppings-customizations").innerHTML = `
+    <h3>|&nbsp&nbsp&nbsp&nbsp&nbspTOPPINGS&nbsp&nbsp&nbsp&nbsp&nbsp|</h3>
+    <input type="checkbox" value="Pepperoni"> Pepperoni
+    <input type="checkbox" value="Pinapples"> Pinapples
+    <input type="checkbox" value="Jalapenos"> Jalapenos
+    <input type="checkbox" value="Garlic"> Garlic
+    <input type="checkbox" value="Onion"> Onion
+    <input type="checkbox" value="Mushrooms"> Mushrooms
+    <input type="checkbox" value="Chicken"> Chicken
+    <input type="checkbox" value="Green-Pepper"> Green Pepper
+    <input type="checkbox" value="Olives"> Olives
+    <input type="checkbox" value="Feta"> Feta
+  `;
+  
+  const addToBasketBtn = menuCustomization.querySelector("div:last-child");
+  addToBasketBtn.onclick = function() {
+    const selectedPizza = JSON.parse(menuCustomization.dataset.selectedPizza);
+    const selectedBase = document.querySelector('input[name="base"]:checked').value;
+    const selectedCheese = document.querySelector('input[name="cheese"]:checked').value;
+    
+    selectedPizza.customBase = selectedBase;
+    selectedPizza.customCheese = selectedCheese;
+    
+    addToBasket(selectedPizza);
+    
+    menuCustomization.style.display = 'none';
+  };
 }
 
 // Call the function to display the date and time when the page loads
