@@ -13,6 +13,7 @@ body {
 
 .container {
   overflow: auto;
+  height: 95vh;
 }
 
 #logo {
