@@ -4,7 +4,7 @@ const test = document.querySelector('.test');
 
 // Function to sort and display pizzas based on the selected filter
 const filterPizzas = (order) => {
-  let pizzas = Array.from(menu_list.children);  // Convert menu items to an array
+  let pizzas = Array.from(menu_list.children); // Convert menu items to an array
   pizzas.sort((a, b) => {
     let priceA = parseFloat(
       a.querySelector('.menu-item-price').innerText.replace('$', '')
@@ -114,8 +114,8 @@ async function getMenuData() {
       const imgElement = listItem.querySelector('.menu-item-image');
 
       // Add an error event listener to replace the image if it fails to load
-      imgElement.onerror = function() {
-        imgElement.src = 'images/fallback-pizza.png';  // Replace with your fallback image path
+      imgElement.onerror = function () {
+        imgElement.src = 'images/fallback-pizza.png'; // Replace with your fallback image path
       };
       menu_list.appendChild(listItem);
     }
@@ -184,7 +184,6 @@ function updateAvailableCredit() {
     userCredit.toFixed(2);
 }
 //basket and credit update functionality ends here
-
 
 // Initialize modals and event listeners
 document.addEventListener('DOMContentLoaded', () => {
@@ -291,7 +290,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
   });
 
-    // Form submit event listener for login form
+  // Form submit event listener for login form
   loginForm.onsubmit = function (event) {
     event.preventDefault();
     if (validateUsernameInput() && validatePasswordInput()) {
@@ -314,10 +313,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Function to display an error message and apply error styles
   const setError = (element, message) => {
     const inputControl = element.parentElement; // Get the parent element of the input
-    const errorDisplay = inputControl.querySelector('.error');  // Find the error display element within the parent
+    const errorDisplay = inputControl.querySelector('.error'); // Find the error display element within the parent
 
     errorDisplay.innerText = message;
-    inputControl.classList.add('error');  // Add error styling class
+    inputControl.classList.add('error'); // Add error styling class
     inputControl.classList.remove('success'); // Remove success styling class
   };
 
@@ -333,9 +332,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Function to validate the username input
   const validateUsernameInput = () => {
-    const usernameValue = username.value.trim();  // Get and trim the username value
-    const validUsername = 'admin';  // Force define the valid username
-    if (usernameValue === '') {  // Check if the username is empty
+    const usernameValue = username.value.trim(); // Get and trim the username value
+    const validUsername = 'admin'; // Force define the valid username
+    if (usernameValue === '') {
+      // Check if the username is empty
       setError(username, 'Username is required');
       return false;
     } else if (usernameValue !== validUsername) {
@@ -368,7 +368,6 @@ document.addEventListener('DOMContentLoaded', () => {
   password.onblur = validatePasswordInput;
 
   getMenuData();
-
 
   //search bar and filter button
 
