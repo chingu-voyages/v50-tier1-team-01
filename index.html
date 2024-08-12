@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="./scripts/script.js" defer></script>
-  <link rel="icon" href="pizza-hub-logo.png" type="image/x-icon">
+  <link rel="icon" href="pizza-hub-logo.png" type="image/x-icon" />
   <link rel="stylesheet" href="./styles/reset.css" />
   <link rel="stylesheet" href="./styles/styles.css" />
   <title>Pizza Hub</title>
@@ -12,203 +13,212 @@
 </head>
 
 <body>
-  <header id="header-section">
-    <img src="images/logo.png" alt="logo" id="logo">
-    <p id="logo-name">PIZZA HUB</p>
-    <div>
-      <button id="searchButton" class="search-btn">
-        <i class="fa fa-search" aria-hidden="true"></i>
-      </button>
-      <input type="text" id="searchBar" class="search-bar" placeholder="Search Pizza Hub" />
-    </div>
+  <div class="container">
+    <header id="header-section">
+      <div class="logo-container">
+        <a href="/">
+          <div>
+            <img src="images/logo.png" alt="logo" id="logo" />
+          </div>
+        </a>
+        <div>
+          <p id="logo-name">PIZZA HUB</p>
+        </div>
+      </div>
+      <div>
+        <button id="searchButton" class="search-btn">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </button>
+        <input type="text" id="searchBar" class="search-bar" placeholder="Search Pizza Hub" />
+      </div>
 
-    <div class="button-container">
-      <button id="openLoginModalBtn" class="login-btn">Login</button>
-      <button id="openSignupModalBtn" class="signup-btn">Sign Up</button>
-      <!--Orders basket icon view NEW-->
-      <button id="basketBtn" class="basket-btn"><i class="fa-solid fa-cart-shopping"></i>(<span
-          id="basketCount">0</span>)</button>
-    </div>
-  </header>
-  <div id="filter-section">
+      <div class="button-container">
+        <button id="openLoginModalBtn" class="login-btn">Login</button>
+        <button id="openSignupModalBtn" class="signup-btn">Sign Up</button>
+        <!--Orders basket icon view NEW-->
+        <button id="basketBtn" class="basket-btn">
+          <i class="fa-solid fa-cart-shopping"></i>(<span id="basketCount">0</span>)
+        </button>
+      </div>
+    </header>
+    <div id="filter-section">
+      <div class="filter-dropdown">
+        <button id="filterButton" class="filter-btn">
+          Sort by <i class="fa-solid fa-caret-down"></i>
+        </button>
 
-    <div class="filter-dropdown">
-      <button id="filterButton" class="filter-btn">Sort by <i class="fa-solid fa-caret-down"></i></button>
-
-      <div id="dropdownContent" class="dropdown-content">
-        <button class="dropdown-item" data-price="low">Low to High </button>
-        <button class="dropdown-item" data-price="high">High to Low</button>
+        <div id="dropdownContent" class="dropdown-content">
+          <button class="dropdown-item" data-price="low">Low to High</button>
+          <button class="dropdown-item" data-price="high">High to Low</button>
+        </div>
       </div>
     </div>
+    <main>
+      <!-- Login Modal -->
 
-  </div>
-  <main>
-    <!-- Login Modal -->
+      <div id="loginModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="login-container">
+            <img src="pizza-hub-logo.png" alt="Pizza Hub Logo" class="logo" />
+            <form id="loginForm" action="/">
+              <div class="input-control">
+                <label for="login-username">Username</label>
+                <input type="text" id="login-username" name="username" placeholder="Type Username" />
+                <div class="error"></div>
+              </div>
+              <div class="input-control">
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" name="password" placeholder="Type Password" />
 
-    <div id="loginModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <div class="login-container">
-          <img src="pizza-hub-logo.png" alt="Pizza Hub Logo" class="logo">
-          <form id="loginForm" action="/">
-            <div class="input-control">
-              <label for="login-username">Username</label>
-              <input type="text" id="login-username" name="username" placeholder="Type Username" />
-              <div class="error"></div>
-            </div>
-            <div class="input-control">
-              <label for="login-password">Password</label>
-              <input type="password" id="login-password" name="password" placeholder="Type Password" />
+                <div class="error"></div>
+              </div>
+              <div class="input-control">
+                <label for="login-credit">Credit Amount ($)</label>
+                <input type="number" id="login-credit" name="credit" min="0" step="0.01" placeholder="Add Amount"
+                  required />
+                <div class="error"></div>
+              </div>
+              <!-- Submit button for the login form -->
+              <div class="button-container">
+                <button type="submit" class="login-btn">LogIn</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
 
-              <div class="error"></div>
+      <!-- Signup Modal -->
+      <div id="signupModal" class="modal">
+        <div class="modal-content">
+          <!-- Close button for the signup modal -->
+          <span class="close">&times;</span>
+          <div class="registration-container">
+            <img src="pizza-hub-logo.png" alt="Pizza Hub Logo" class="logo" />
+            <!-- Signup form -->
+            <form id="registration-form">
+              <div class="input-control">
+                <label for="signup-username">Username: </label>
+                <input type="text" placeholder="Enter Username" id="signup-username" name="username" required />
+                <div class="error"></div>
+              </div>
+              <div class="input-control">
+                <label for="email">Email: </label>
+                <input type="email" placeholder="Enter Email" id="email" name="email" required />
+                <div class="error"></div>
+              </div>
+              <div class="input-control">
+                <label for="signup-password">Password: </label>
+                <input type="password" placeholder="Enter Password" id="signup-password" name="password"
+                  pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9])\S{8,}$"
+                  title="Password must contain at least one number, one alphabet, one symbol, and be at least 8 characters long"
+                  required />
+                <div class="error"></div>
+              </div>
+              <div class="input-control">
+                <label for="mobile">Contact:</label>
+                <input type="text" placeholder="Mobile Number" id="mobile" name="mobile" maxlength="10" required />
+                <div class="error"></div>
+              </div>
+              <!-- Submit button for the signup form -->
+              <div class="finalize">
+                <button type="submit" class="registerbtn">Register</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Order basket Modal NEW-->
+      <div id="basketModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p class="basket-heading">Your basket</p>
+          <div class="basket-summary">
+            <div class="basket-title">
+              <p>pizza hub</p>
             </div>
-            <div class="input-control">
-              <label for="login-credit">Credit Amount ($)</label>
-              <input type="number" id="login-credit" name="credit" min="0" step="0.01" placeholder="Add Amount"
-                required />
-              <div class="error"></div>
+            <div class="basket-prelim">
+              <p>
+                Total: <strong>$</strong><span id="basketTotal">0.00</span>
+              </p>
+              <p id="currentDateTime"></p>
             </div>
-            <!-- Submit button for the login form -->
+          </div>
+          <div class="thanks-box">
+            <p>Thanks for your order</p>
+            <img src="/logo.png" alt="" />
+          </div>
+          <ul id="basketItems"></ul>
+          <div class="basket-checkout">
+            <div class="basket-total">
+              <p>Total</p>
+              <p class="checkout-price">
+                <strong>$</strong><span id="finalTotal">0.00</span>
+              </p>
+            </div>
             <div class="button-container">
-
-              <button type="submit" class="login-btn">LogIn</button>
-
+              <button id="checkoutBtn" class="checkout-btn">Checkout</button>
             </div>
-
-          </form>
-        </div>
-      </div>
-    </div>
-
-    <!-- Signup Modal -->
-    <div id="signupModal" class="modal">
-      <div class="modal-content">
-        <!-- Close button for the signup modal -->
-        <span class="close">&times;</span>
-        <div class="registration-container">
-          <img src="pizza-hub-logo.png" alt="Pizza Hub Logo" class="logo">
-          <!-- Signup form -->
-          <form id="registration-form">
-            <div class="input-control">
-              <label for="signup-username">Username: </label>
-              <input type="text" placeholder="Enter Username" id="signup-username" name="username" required />
-              <div class="error"></div>
-            </div>
-            <div class="input-control">
-              <label for="email">Email: </label>
-              <input type="email" placeholder="Enter Email" id="email" name="email" required />
-              <div class="error"></div>
-            </div>
-            <div class="input-control">
-              <label for="signup-password">Password: </label>
-              <input type="password" placeholder="Enter Password" id="signup-password" name="password"
-                pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9])\S{8,}$"
-                title="Password must contain at least one number, one alphabet, one symbol, and be at least 8 characters long"
-                required />
-              <div class="error"></div>
-            </div>
-            <div class="input-control">
-              <label for="mobile">Contact:</label>
-              <input type="text" placeholder="Mobile Number" id="mobile" name="mobile" maxlength="10" required />
-              <div class="error"></div>
-            </div>
-            <!-- Submit button for the signup form -->
-            <div class="finalize">
-              <button type="submit" class="registerbtn">Register</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-
-    <!-- Order basket Modal NEW-->
-    <div id="basketModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <p class="basket-heading">Your basket</p>
-        <div class="basket-summary">
-          <div class="basket-title">
-            <p>pizza hub</p>
-          </div>
-          <div class="basket-prelim">
-            <p>Total: <strong>$</strong><span id="basketTotal">0.00</span></p>
-            <p id="currentDateTime"></p>
           </div>
         </div>
-        <div class="thanks-box">
-          <p>Thanks for your order</p>
-          <img src="/logo.png" alt="" />
-        </div>
-        <ul id="basketItems"></ul>
-        <div class="basket-checkout">
-          <div class="basket-total">
-            <p>Total</p>
-            <p class="checkout-price">
-              <strong>$</strong><span id="finalTotal">0.00</span>
+      </div>
+
+      <!-- Checkout Modal NEW-->
+      <div id="checkoutModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p class="checkout-heading">Checkout</p>
+          <div class="checkout-logo">
+            <img src="/logo.png" alt="" />
+          </div>
+          <div class="total-container">
+            <p class="checkout-text">
+              Total:<span class="checkout-total"> $</span><span id="checkoutTotal" class="checkout-total">0.00</span>
             </p>
           </div>
-          <div class="button-container">
-            <button id="checkoutBtn" class="checkout-btn">Checkout</button>
+          <p class="checkout-text">
+            Available Credit:<span class="checkout-credit"> $</span><span id="availableCredit"
+              class="checkout-credit">0.00</span>
+          </p>
+          <div class="pay-container">
+            <button id="payBtn" class="pay-btn">Pay</button>
           </div>
         </div>
       </div>
-    </div>
-
-    <!-- Checkout Modal NEW-->
-    <div id="checkoutModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <p class="checkout-heading">Checkout</p>
-        <div class="checkout-logo">
-          <img src="/logo.png" alt="" />
-        </div>
-        <div class="total-container">
-          <p class="checkout-text">
-            Total:<span class="checkout-total"> $</span><span id="checkoutTotal" class="checkout-total">0.00</span>
-          </p>
-        </div>
-        <p class="checkout-text">
-          Available Credit:<span class="checkout-credit"> $</span><span id="availableCredit"
-            class="checkout-credit">0.00</span>
-        </p>
-        <div class="pay-container">
-          <button id="payBtn" class="pay-btn">Pay</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="menu-div" id="menu-div">
-      <ul class="menu-list" id="menu-list"></ul>
-    </div>
-
-    <div id="menu-customization" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Customize your pizza</h2>
-
-        <div id="base-customization" class="base-customization">
-        </div>
-
-        <div id="cheese-customization" class="cheese-customization">
-        </div>
-
-        <div id="toppings-customizations" class="toppings-customizations">
-        </div>
-
-        <div class="button-container">
-          <button id="addCustomizationBtn">Add To Basket</button>
-        </div>
+      <div class="menu-div" id="menu-div">
+        <ul class="menu-list" id="menu-list"></ul>
       </div>
 
-    </div>
-  </main>
-  <div id="footer">
-    <p id="footer-text"><span id="copyright-logo">Ⓒ</span> 2024 Pizza hub</p>
-    <a href="https://github.com/chingu-voyages/v50-tier1-team-01" target="_blank">
-      <img src="images/github-icon.png" alt="github-icon" id="github-icon">
-    </a>
+      <div id="menu-customization" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Customize your pizza</h2>
 
+          <div id="base-customization" class="base-customization">
+          </div>
+
+          <div id="cheese-customization" class="cheese-customization">
+          </div>
+
+          <div id="toppings-customizations" class="toppings-customizations">
+          </div>
+
+          <div class="button-container">
+            <button id="addCustomizationBtn">Add To Basket</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    </main>
   </div>
-
-
+  <div id="footer">
+    <p id="footer-text"><span id="copyright-logo">Ⓒ</span> 2024 Pizza Hub</p>
+    <a href="https://github.com/chingu-voyages/v50-tier1-team-01" target="_blank">
+      <img src="images/github-icon.png" alt="github-icon" id="github-icon" />
+    </a>
+  </div>
 </body>
+
+</html>
