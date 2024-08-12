@@ -4,7 +4,7 @@ const test = document.querySelector('.test');
 
 // Function to sort and display pizzas based on the selected filter
 const filterPizzas = (order) => {
-  let pizzas = Array.from(menu_list.children);  // Convert menu items to an array
+  let pizzas = Array.from(menu_list.children); // Convert menu items to an array
   pizzas.sort((a, b) => {
     let priceA = parseFloat(
       a.querySelector('.menu-item-price').innerText.replace('$', '')
@@ -114,8 +114,8 @@ async function getMenuData() {
       const imgElement = listItem.querySelector('.menu-item-image');
 
       // Add an error event listener to replace the image if it fails to load
-      imgElement.onerror = function() {
-        imgElement.src = 'images/fallback-pizza.png';  // Replace with your fallback image path
+      imgElement.onerror = function () {
+        imgElement.src = 'images/fallback-pizza.png'; // Replace with your fallback image path
       };
       menu_list.appendChild(listItem);
     }
@@ -185,7 +185,6 @@ function updateAvailableCredit() {
 }
 //basket and credit update functionality ends here
 
-
 // Initialize modals and event listeners
 document.addEventListener('DOMContentLoaded', () => {
   const loginModal = document.getElementById('loginModal'); //main login modal
@@ -208,7 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add to Basket
     if (event.target.classList.contains('add-to-basket-button')) {
       const pizzaData = JSON.parse(event.target.getAttribute('data-pizza'));
-      showCustomizationModal(pizzaData);
+      addToBasket(pizzaData);
     }
     // Remove from Basket
     else if (event.target.classList.contains('remove-from-basket-button')) {
@@ -291,7 +290,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
   });
 
-    // Form submit event listener for login form
+  // Form submit event listener for login form
   loginForm.onsubmit = function (event) {
     event.preventDefault();
     if (validateUsernameInput() && validatePasswordInput()) {
@@ -314,10 +313,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Function to display an error message and apply error styles
   const setError = (element, message) => {
     const inputControl = element.parentElement; // Get the parent element of the input
-    const errorDisplay = inputControl.querySelector('.error');  // Find the error display element within the parent
+    const errorDisplay = inputControl.querySelector('.error'); // Find the error display element within the parent
 
     errorDisplay.innerText = message;
-    inputControl.classList.add('error');  // Add error styling class
+    inputControl.classList.add('error'); // Add error styling class
     inputControl.classList.remove('success'); // Remove success styling class
   };
 
@@ -333,9 +332,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Function to validate the username input
   const validateUsernameInput = () => {
-    const usernameValue = username.value.trim();  // Get and trim the username value
-    const validUsername = 'admin';  // Force define the valid username
-    if (usernameValue === '') {  // Check if the username is empty
+    const usernameValue = username.value.trim(); // Get and trim the username value
+    const validUsername = 'admin'; // Force define the valid username
+    if (usernameValue === '') {
+      // Check if the username is empty
       setError(username, 'Username is required');
       return false;
     } else if (usernameValue !== validUsername) {
@@ -350,7 +350,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Function to validate the password input
   const validatePasswordInput = () => {
     const passwordValue = password.value.trim();
-    const validPassword = 'password1';
+    const validPassword = 'p@ssword1';
     if (passwordValue === '') {
       setError(password, 'Password is required'); // Show error message
       return false;
@@ -368,7 +368,6 @@ document.addEventListener('DOMContentLoaded', () => {
   password.onblur = validatePasswordInput;
 
   getMenuData();
-
 
   //search bar and filter button
 
@@ -411,57 +410,6 @@ function displayCurrentDateTime() {
   const formattedDate = formatDate(currentDate);
   const formattedTime = formatTime(currentDate);
   currentDateTimeElement.textContent += `${formattedDate} ${formattedTime}`;
-}
-
-function showCustomizationModal(pizzaData) {
-  const menuCustomization = document.querySelector("#menu-customization");
-  menuCustomization.style.display = 'block';
-  
-  menuCustomization.dataset.selectedPizza = JSON.stringify(pizzaData);
-  
-  document.querySelector("#base-customization").innerHTML = `
-    <h3>|&nbsp&nbsp&nbsp&nbsp&nbspBASE&nbsp&nbsp&nbsp&nbsp&nbsp|</h3>
-    <input type="radio" name="base" value="Original" checked> Original
-    <input type="radio" name="base" value="Thin & Crispy"> Thin & Crispy
-    <input type="radio" name="base" value="Extra Thick"> Extra Thick
-  `;
-  
-  document.querySelector("#cheese-customization").innerHTML = `
-    <h3>|&nbsp&nbsp&nbsp&nbsp&nbspCHEESE&nbsp&nbsp&nbsp&nbsp&nbsp|</h3>
-    <input type="radio" name="cheese" value="Normal" checked> Normal Mozzarella
-    <input type="radio" name="cheese" value="Double"> Double Mozzarella
-    <input type="radio" name="cheese" value="Triple"> Triple Mozzarella
-  `;
-
-  document.querySelector("#toppings-customizations").innerHTML = `
-    <h3>|&nbsp&nbsp&nbsp&nbsp&nbspTOPPINGS&nbsp&nbsp&nbsp&nbsp&nbsp|</h3>
-    <input class="toppings" type="checkbox" value="Pepperoni"> Pepperoni
-    <input class="toppings" type="checkbox" value="Pinapples"> Pinapples
-    <input class="toppings" type="checkbox" value="Jalapenos"> Jalapenos
-    <input class="toppings" type="checkbox" value="Garlic"> Garlic
-    <input class="toppings" type="checkbox" value="Onion"> Onion
-    <input class="toppings" type="checkbox" value="Mushrooms"> Mushrooms
-    <input class="toppings" type="checkbox" value="Chicken"> Chicken
-    <input class="toppings" type="checkbox" value="Green-Pepper"> Green Pepper
-    <input class="toppings" type="checkbox" value="Olives"> Olives
-    <input class="toppings" type="checkbox" value="Feta"> Feta
-  `;
-  
-  const addToBasketBtn = menuCustomization.querySelector("#addCustomizationBtn");
-  addToBasketBtn.onclick = function() {
-    const selectedPizza = JSON.parse(menuCustomization.dataset.selectedPizza);
-    const selectedBase = document.querySelector('input[name="base"]:checked').value;
-    const selectedCheese = document.querySelector('input[name="cheese"]:checked').value;
-//    const selectedToppings = document.querySelector('input[class="toppings"]:checked').value;
-    
-    selectedPizza.customBase = selectedBase;
-    selectedPizza.customCheese = selectedCheese;
-//    selectedPizza.customToppings = selectedToppings;
-    
-    addToBasket(selectedPizza);
-    
-    menuCustomization.style.display = 'none';
-  };
 }
 
 // Call the function to display the date and time when the page loads
